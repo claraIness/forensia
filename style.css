@@ -239,6 +239,155 @@ a:hover {
 
 }
 
+.archivo-control {
+
+    margin-top: 36px;
+
+    margin-bottom: 42px;
+
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid rgba(0,255,136,0.15);
+
+}
+
+.archivo-busqueda {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    margin-top: 16px;
+
+    margin-bottom: 16px;
+
+}
+
+.archivo-busqueda label {
+
+    color: #00ff88;
+
+    font-family: 'Space Mono', monospace;
+
+    letter-spacing: 3px;
+
+    white-space: nowrap;
+
+}
+
+.archivo-busqueda input {
+
+    width: 100%;
+
+    background-color: #050505;
+
+    border: 1px solid rgba(0,255,136,0.35);
+
+    color: #b388ff;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    padding: 11px 12px;
+
+    outline: none;
+
+}
+
+.archivo-busqueda input:focus {
+
+    border-color: #00ff88;
+
+    box-shadow: 0 0 10px rgba(0,255,136,0.28);
+
+}
+
+.archivo-filtros {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+.modulos-filtros {
+
+    margin-top: 22px;
+
+    margin-bottom: 22px;
+
+    flex-wrap: nowrap;
+
+}
+
+.modulos-filtros .archivo-filtro {
+
+    font-size: 13px;
+
+    padding: 9px 12px;
+
+}
+
+.archivo-filtro {
+
+    background-color: #050505;
+
+    border: 1px solid rgba(0,255,136,0.35);
+
+    color: #b388ff;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    padding: 10px 14px;
+
+    cursor: pointer;
+
+}
+
+.archivo-filtro:hover,
+.archivo-filtro.active {
+
+    color: #00ff88;
+
+    border-color: #00ff88;
+
+    background-color: rgba(0,255,136,0.08);
+
+    box-shadow: 0 0 10px rgba(0,255,136,0.22);
+
+}
+
+.archivo-resultado {
+
+    color: #00ff88;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+    margin-top: 16px;
+
+}
+
+.dossier-oculto {
+
+    display: none;
+
+}
+
 
 
 .navegacion {

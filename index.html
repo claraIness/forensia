@@ -106,13 +106,11 @@
 
 
 
-                <div class="navegacion">
+                <div class="archivo-filtros modulos-filtros" aria-label="Filtros de categoria">
 
-                    <a href="#derecho">[ LEG ] DERECHO DIGITAL</a>
-
-                    <br>
-
-                    <a href="#forense">[ FOR ] INFORM&Aacute;TICA FORENSE</a>
+                    <button class="archivo-filtro active" type="button" data-filtro="todos">[TODOS]</button>
+                    <button class="archivo-filtro" type="button" data-filtro="derecho">[DERECHO DIGITAL] </button>
+                    <button class="archivo-filtro" type="button" data-filtro="forense">[INFORM&Aacute;TICA FORENSE] </button>
 
                 </div>
 
@@ -134,6 +132,27 @@
 
 
 
+        <section class="archivo-control" aria-label="Filtro de expedientes">
+
+            <p class="acceso-modulos">
+                > CONSULTA DE EXPEDIENTES
+            </p>
+
+            <div class="archivo-busqueda">
+
+                <label for="buscador-expedientes">[ QUERY ]</label>
+                <input id="buscador-expedientes" type="search" placeholder="buscar por codigo, titulo o clasificacion">
+
+            </div>
+
+            <p class="archivo-resultado" id="archivo-resultado">
+                [ RESULTADO ] 6 expedientes visibles
+            </p>
+
+        </section>
+
+
+
         <h2 id="derecho" class="seccion">
             DERECHO DIGITAL
             <span class="contador">[3 EXPEDIENTES]</span>
@@ -143,7 +162,7 @@
 
         <div class="grid-dossiers grid-derecho">
 
-                <a href="leg001-convenio-budapest.html" target="_blank" rel="noopener noreferrer">
+                <a href="leg001-convenio-budapest.html" target="_blank" rel="noopener noreferrer" data-categoria="derecho" data-busqueda="leg-001 convenio de budapest derecho digital cooperacion internacional">
                 <div class="dossier">
 
                     <p class="badge-activo">
@@ -178,7 +197,7 @@
                 </div>
             </a>
 
-            <a href="protecciondatospersonales.html" target="_blank" rel="noopener noreferrer">
+            <a href="protecciondatospersonales.html" target="_blank" rel="noopener noreferrer" data-categoria="derecho" data-busqueda="leg-002 proteccion de datos personales derecho digital proteccion de datos">
 
                 <div class="dossier">
 
@@ -217,7 +236,7 @@
 
             </a>
 
-            <a href="evidenciadigital.html" target="_blank" rel="noopener noreferrer">
+            <a href="evidenciadigital.html" target="_blank" rel="noopener noreferrer" data-categoria="derecho" data-busqueda="leg-003 evidencia digital derecho digital prueba digital">
 
                 <div class="dossier">
 
@@ -267,7 +286,7 @@
 
         <div class="grid-dossiers grid-derecho">
 
-            <a href="periciasinformaticas.html" target="_blank" rel="noopener noreferrer">
+            <a href="periciasinformaticas.html" target="_blank" rel="noopener noreferrer" data-categoria="forense" data-busqueda="for-001 pericias informaticas informatica forense evidencia digital">
 
                 <div class="dossier">
 
@@ -278,7 +297,7 @@
                     <h2>FOR-001</h2>
                     <p class="metadata">
                         <span class="led"></span>
-                        EXPEDIENTE &bull; MAYO 2026 &bull; VERIFICADO
+                        EXPEDIENTE &bull; MAYO 2026 &bull; 
                     </p>
 
 
@@ -306,7 +325,7 @@
 
             </a>
 
-            <a href="cadenadecustodia.html" target="_blank" rel="noopener noreferrer">
+            <a href="cadenadecustodia.html" target="_blank" rel="noopener noreferrer" data-categoria="forense" data-busqueda="for-002 cadena de custodia informatica forense preservacion de evidencia">
 
                 <div class="dossier">
 
@@ -317,7 +336,7 @@
                     <h2>FOR-002</h2>
                     <p class="metadata">
                         <span class="led"></span>
-                        EXPEDIENTE &bull; MAYO 2026 &bull; VERIFICADO
+                        EXPEDIENTE &bull; MAYO 2026 &bull; 
                     </p>
 
 
@@ -345,7 +364,7 @@
 
             </a>
 
-            <a href="for-003-adquisicion-forense.html" target="_blank" rel="noopener noreferrer">
+            <a href="for-003-adquisicion-forense.html" target="_blank" rel="noopener noreferrer" data-categoria="forense" data-busqueda="for-003 adquisicion forense informatica forense obtencion de evidencia">
 
                 <div class="dossier">
 
@@ -356,7 +375,7 @@
                     <h2>FOR-003</h2>
                     <p class="metadata">
                         <span class="led"></span>
-                        EXPEDIENTE &bull; JUNIO 2026 &bull; VERIFICADO
+                        EXPEDIENTE &bull; JUNIO 2026 &bull; 
                     </p>
 
 

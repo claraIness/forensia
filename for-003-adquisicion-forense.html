@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>| Adquisici&oacute;n Forense</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="pagina-dossier">
+
+    <div class="contenedor-principal">
+
+        <div class="header-system">
+
+            <h1>ADQUISICI&Oacute;N FORENSE</h1>
+
+            <p class="sistema codigo-expediente-titulo">
+                FOR-003
+            </p>
+
+            <p class="sistema">
+                DOSSIER DE INFORM&Aacute;TICA FORENSE
+            </p>
+
+        </div>
+
+        <div class="ficha-tecnica-forense">
+
+            <p><span>EXPEDIENTE:</span> <strong>FOR-003</strong></p>
+            <p><span>CLASIFICACI&Oacute;N:</span> <strong>INFORM&Aacute;TICA FORENSE</strong></p>
+            <p><span>ESTADO:</span> <strong>VERIFICADO</strong></p>
+            <p><span>FUENTE:</span> <strong>DIPLOMATURA EN CIBERCRIMEN</strong></p>
+            <p><span>&Uacute;LTIMA REVISI&Oacute;N:</span> <strong>JUNIO 2026</strong></p>
+
+        </div>
+
+        <p class="fuente-documental">
+            [FORENSIA] Registro documental sobre t&eacute;cnicas de obtenci&oacute;n, preservaci&oacute;n y validaci&oacute;n de evidencia digital para an&aacute;lisis forense.
+        </p>
+
+        <p class="acceso-modulos" id="menu-dossier">
+            > &Iacute;NDICE DEL DOSSIER
+        </p>
+
+        <nav class="indice-dossier">
+
+            <a href="#fundamentos"><span>[FOR-001]</span> Fundamentos</a>
+            <a href="#metodos-adquisicion"><span>[FOR-002]</span> M&eacute;todos de Adquisici&oacute;n</a>
+            <a href="#imagen-forense"><span>[FOR-003]</span> Imagen Forense</a>
+            <a href="#hash-verificacion"><span>[FOR-004]</span> Hash y Verificaci&oacute;n</a>
+            <a href="#herramientas-forenses"><span>[FOR-005]</span> Herramientas Forenses</a>
+            <a href="#preservacion"><span>[FOR-006]</span> Preservaci&oacute;n</a>
+            <a href="#validez-tecnica"><span>[FOR-007]</span> Validez T&eacute;cnica</a>
+            <a href="#caso-practico"><span>[FOR-008]</span> Caso Pr&aacute;ctico</a>
+
+        </nav>
+
+        <section id="fundamentos" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 01 ]</p>
+            <h2 class="seccion">Fundamentos</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="conceptos-forenses">
+                <div class="conceptos-lista">
+                    <button class="concepto-button active" type="button" data-concepto="fundamento-adquisicion">ADQUISICI&Oacute;N FORENSE</button>
+                    <button class="concepto-button" type="button" data-concepto="fundamento-original">EVIDENCIA ORIGINAL</button>
+                    <button class="concepto-button" type="button" data-concepto="fundamento-copia">COPIA DE TRABAJO</button>
+                    <button class="concepto-button" type="button" data-concepto="fundamento-procedimiento">PROCEDIMIENTO</button>
+                </div>
+
+                <div class="concepto-panel active" id="fundamento-adquisicion">
+                    <p class="codigo-sistema">[ FUNDAMENTO ]</p>
+                    <h3>Adquisici&oacute;n Forense</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Proceso t&eacute;cnico mediante el cual se obtiene una copia controlada de la evidencia digital para su posterior an&aacute;lisis.</p>
+                    <p><span>IMPORTANCIA:</span> Permite preservar la informaci&oacute;n original evitando modificaciones que comprometan su valor probatorio.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Realizar copias verificables de discos, dispositivos m&oacute;viles, servidores o medios de almacenamiento utilizando procedimientos documentados.</p>
+                </div>
+
+                <div class="concepto-panel" id="fundamento-original">
+                    <p class="codigo-sistema">[ FUNDAMENTO ]</p>
+                    <h3>Evidencia Original</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Fuente primaria de informaci&oacute;n digital obtenida durante una investigaci&oacute;n forense.</p>
+                    <p><span>IMPORTANCIA:</span> Constituye el elemento original sobre el cual se fundamenta toda la validez t&eacute;cnica del an&aacute;lisis.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Identificar, preservar y documentar el dispositivo o sistema que contiene la evidencia antes de cualquier intervenci&oacute;n.</p>
+                </div>
+
+                <div class="concepto-panel" id="fundamento-copia">
+                    <p class="codigo-sistema">[ FUNDAMENTO ]</p>
+                    <h3>Copia de Trabajo</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> R&eacute;plica de la evidencia utilizada para realizar an&aacute;lisis sin intervenir sobre el soporte original.</p>
+                    <p><span>IMPORTANCIA:</span> Reduce el riesgo de alterar o contaminar la evidencia durante la investigaci&oacute;n.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Realizar b&uacute;squedas, recuperaci&oacute;n de archivos y an&aacute;lisis t&eacute;cnico &uacute;nicamente sobre la copia forense obtenida.</p>
+                </div>
+
+                <div class="concepto-panel" id="fundamento-procedimiento">
+                    <p class="codigo-sistema">[ FUNDAMENTO ]</p>
+                    <h3>Procedimiento</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Conjunto de pasos t&eacute;cnicos y documentales aplicados para obtener evidencia digital de manera controlada.</p>
+                    <p><span>IMPORTANCIA:</span> Garantiza la integridad, trazabilidad y validez de la evidencia obtenida.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Documentar identificaci&oacute;n, adquisici&oacute;n, verificaci&oacute;n mediante hash, almacenamiento y an&aacute;lisis de la evidencia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="metodos-adquisicion" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 02 ]</p>
+            <h2 class="seccion">M&eacute;todos de Adquisici&oacute;n</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="stage-selector">
+                <div class="stage-buttons">
+                    <button class="stage-button active" type="button" data-stage="metodo-live">[01] LIVE ACQUISITION</button>
+                    <button class="stage-button" type="button" data-stage="metodo-dead">[02] DEAD ACQUISITION</button>
+                    <button class="stage-button" type="button" data-stage="metodo-logica">[03] L&Oacute;GICA</button>
+                    <button class="stage-button" type="button" data-stage="metodo-fisica">[04] F&Iacute;SICA</button>
+                </div>
+
+                <div class="stage-panel active" id="metodo-live">
+                    <p class="codigo-sistema">[ M&Eacute;TODO ]</p>
+                    <h3>Live Acquisition</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Obtenci&oacute;n de evidencia mientras el sistema permanece encendido y operativo.</p>
+                    <p><span>IMPORTANCIA:</span> Permite capturar informaci&oacute;n vol&aacute;til que desaparecer&iacute;a al apagar el equipo.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Recolecci&oacute;n de memoria RAM, conexiones activas, procesos en ejecuci&oacute;n y sesiones abiertas.</p>
+                </div>
+
+                <div class="stage-panel" id="metodo-dead">
+                    <p class="codigo-sistema">[ M&Eacute;TODO ]</p>
+                    <h3>Dead Acquisition</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Obtenci&oacute;n de evidencia digital con el sistema apagado o desconectado.</p>
+                    <p><span>IMPORTANCIA:</span> Reduce el riesgo de modificaciones accidentales sobre la informaci&oacute;n almacenada.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Extracci&oacute;n de discos para generar im&aacute;genes forenses controladas en laboratorio.</p>
+                </div>
+
+                <div class="stage-panel" id="metodo-logica">
+                    <p class="codigo-sistema">[ M&Eacute;TODO ]</p>
+                    <h3>L&oacute;gica</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Adquisici&oacute;n de archivos, carpetas y datos visibles mediante herramientas del sistema operativo.</p>
+                    <p><span>IMPORTANCIA:</span> Permite obtener informaci&oacute;n espec&iacute;fica sin copiar la totalidad del dispositivo.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Recolecci&oacute;n de documentos, correos electr&oacute;nicos, registros y bases de datos.</p>
+                </div>
+
+                <div class="stage-panel" id="metodo-fisica">
+                    <p class="codigo-sistema">[ M&Eacute;TODO ]</p>
+                    <h3>F&iacute;sica</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Obtenci&oacute;n completa de todos los sectores de almacenamiento del dispositivo.</p>
+                    <p><span>IMPORTANCIA:</span> Permite recuperar datos eliminados y espacio no asignado.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Creaci&oacute;n de im&aacute;genes bit a bit para an&aacute;lisis forense exhaustivo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="imagen-forense" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 03 ]</p>
+            <h2 class="seccion">Imagen Forense</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="conceptos-forenses">
+                <div class="conceptos-lista">
+                    <button class="concepto-button active" type="button" data-concepto="imagen-bit">BIT A BIT</button>
+                    <button class="concepto-button" type="button" data-concepto="imagen-clonacion">CLONACI&Oacute;N</button>
+                    <button class="concepto-button" type="button" data-concepto="imagen-integridad">INTEGRIDAD</button>
+                    <button class="concepto-button" type="button" data-concepto="imagen-almacenamiento">ALMACENAMIENTO</button>
+                </div>
+
+                <div class="concepto-panel active" id="imagen-bit">
+                    <p class="codigo-sistema">[ IMAGEN FORENSE ]</p>
+                    <h3>Bit a Bit</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Copia exacta de todos los sectores de almacenamiento, incluyendo espacio libre y datos eliminados.</p>
+                    <p><span>IMPORTANCIA:</span> Garantiza una r&eacute;plica &iacute;ntegra del soporte original para an&aacute;lisis posteriores.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Generaci&oacute;n de im&aacute;genes forenses de discos r&iacute;gidos, SSD o dispositivos extra&iacute;bles.</p>
+                    <div style="margin-top: 18px; padding: 16px; background-color: #090909; border: 1px solid rgba(0,255,136,0.25); color: #00ff88; font-family: Consolas, 'Courier New', monospace; letter-spacing: 2px; line-height: 1.8;">
+                        <p class="codigo-sistema">PROCESO DE ADQUISICI&Oacute;N</p>
+                        <pre style="margin: 0; color: #00ff88; font-family: Consolas, 'Courier New', monospace; font-size: 13px; letter-spacing: 1px; line-height: 1.6;">├── SOPORTE_ORIGINAL
+│   └── dispositivo_incautado
+│
+├── IMAGEN_FORENSE
+│   └── evidencia.E01
+│
+├── HASH_VERIFICACION
+│   └── SHA256.txt
+│
+├── COPIA_DE_TRABAJO
+│   └── analisis.img
+│
+└── ANALISIS_TECNICO
+    └── informe_preliminar.pdf</pre>
+                    </div>
+                </div>
+
+                <div class="concepto-panel" id="imagen-clonacion">
+                    <p class="codigo-sistema">[ IMAGEN FORENSE ]</p>
+                    <h3>Clonaci&oacute;n</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Copia exacta de un dispositivo hacia otro soporte de almacenamiento.</p>
+                    <p><span>IMPORTANCIA:</span> Permite trabajar sobre una r&eacute;plica sin comprometer la evidencia original.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Migraci&oacute;n controlada de discos para an&aacute;lisis en laboratorio.</p>
+                </div>
+
+                <div class="concepto-panel" id="imagen-integridad">
+                    <p class="codigo-sistema">[ IMAGEN FORENSE ]</p>
+                    <h3>Integridad</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Garant&iacute;a de que la imagen forense conserva exactamente el contenido original.</p>
+                    <p><span>IMPORTANCIA:</span> Mantiene el valor probatorio de la evidencia.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Verificaci&oacute;n mediante algoritmos hash antes y despu&eacute;s de la adquisici&oacute;n.</p>
+                </div>
+
+                <div class="concepto-panel" id="imagen-almacenamiento">
+                    <p class="codigo-sistema">[ IMAGEN FORENSE ]</p>
+                    <h3>Almacenamiento</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Resguardo seguro de im&aacute;genes forenses obtenidas durante la investigaci&oacute;n.</p>
+                    <p><span>IMPORTANCIA:</span> Evita p&eacute;rdidas, corrupci&oacute;n o accesos no autorizados.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Conservaci&oacute;n en servidores protegidos o medios dedicados de evidencia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="hash-verificacion" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 04 ]</p>
+            <h2 class="seccion">Hash y Verificaci&oacute;n</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="conceptos-forenses">
+                <div class="conceptos-lista">
+                    <button class="concepto-button active" type="button" data-concepto="hash-md5">MD5</button>
+                    <button class="concepto-button" type="button" data-concepto="hash-sha1">SHA-1</button>
+                    <button class="concepto-button" type="button" data-concepto="hash-sha256">SHA-256</button>
+                    <button class="concepto-button" type="button" data-concepto="hash-verificacion-panel">VERIFICACI&Oacute;N</button>
+                </div>
+
+                <div class="concepto-panel active" id="hash-md5">
+                    <p class="codigo-sistema">[ HASH ]</p>
+                    <h3>MD5</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Algoritmo hash utilizado para generar una huella digital &uacute;nica de un archivo o soporte.</p>
+                    <p><span>IMPORTANCIA:</span> Permite verificar que la evidencia no sufri&oacute; modificaciones durante su manipulaci&oacute;n.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Comparar valores hash antes y despu&eacute;s de cada procedimiento forense.</p>
+                </div>
+
+                <div class="concepto-panel" id="hash-sha1">
+                    <p class="codigo-sistema">[ HASH ]</p>
+                    <h3>SHA-1</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Algoritmo hash utilizado hist&oacute;ricamente para validar integridad de archivos.</p>
+                    <p><span>IMPORTANCIA:</span> Permite detectar modificaciones en la evidencia digital.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Comparaci&oacute;n de valores hash durante procedimientos forenses.</p>
+                </div>
+
+                <div class="concepto-panel" id="hash-sha256">
+                    <p class="codigo-sistema">[ HASH ]</p>
+                    <h3>SHA-256</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Algoritmo criptogr&aacute;fico ampliamente utilizado para verificaci&oacute;n de integridad.</p>
+                    <p><span>IMPORTANCIA:</span> Ofrece mayor seguridad frente a colisiones que algoritmos m&aacute;s antiguos.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Validaci&oacute;n de im&aacute;genes forenses y archivos cr&iacute;ticos.</p>
+                </div>
+
+                <div class="concepto-panel" id="hash-verificacion-panel">
+                    <p class="codigo-sistema">[ HASH ]</p>
+                    <h3>Verificaci&oacute;n</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Proceso de comprobaci&oacute;n de integridad mediante comparaci&oacute;n de hashes.</p>
+                    <p><span>IMPORTANCIA:</span> Confirma que la evidencia no fue alterada.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Verificaci&oacute;n previa y posterior a transferencias o an&aacute;lisis.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="herramientas-forenses" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 05 ]</p>
+            <h2 class="seccion">Herramientas Forenses</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="conceptos-forenses">
+                <div class="conceptos-lista">
+                    <button class="concepto-button active" type="button" data-concepto="herramienta-ftk">FTK IMAGER</button>
+                    <button class="concepto-button" type="button" data-concepto="herramienta-autopsy">AUTOPSY</button>
+                    <button class="concepto-button" type="button" data-concepto="herramienta-encase">ENCASE</button>
+                    <button class="concepto-button" type="button" data-concepto="herramienta-dd">DD</button>
+                </div>
+
+                <div class="concepto-panel active" id="herramienta-ftk">
+                    <p class="codigo-sistema">[ HERRAMIENTA ]</p>
+                    <h3>FTK Imager</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Herramienta forense utilizada para adquirir y visualizar evidencia digital sin alterar el soporte original.</p>
+                    <p><span>FUNCI&Oacute;N:</span> Crear im&aacute;genes forenses y obtener informaci&oacute;n preliminar de dispositivos de almacenamiento.</p>
+                    <p><span>VENTAJA:</span> Amplio uso profesional y compatibilidad con m&uacute;ltiples formatos de evidencia.</p>
+                </div>
+
+                <div class="concepto-panel" id="herramienta-autopsy">
+                    <p class="codigo-sistema">[ HERRAMIENTA ]</p>
+                    <h3>Autopsy</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Plataforma de an&aacute;lisis forense digital basada en c&oacute;digo abierto utilizada para examinar discos, im&aacute;genes forenses y sistemas de archivos.</p>
+                    <p><span>FUNCI&Oacute;N:</span> Permite recuperar archivos, analizar actividad del sistema y generar informes periciales.</p>
+                    <p><span>VENTAJA:</span> Amplio uso acad&eacute;mico y profesional, integraci&oacute;n con The Sleuth Kit y soporte para m&uacute;ltiples formatos de evidencia.</p>
+                </div>
+
+                <div class="concepto-panel" id="herramienta-encase">
+                    <p class="codigo-sistema">[ HERRAMIENTA ]</p>
+                    <h3>EnCase</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Suite profesional utilizada en investigaciones forenses para adquisici&oacute;n, an&aacute;lisis y presentaci&oacute;n de evidencia digital.</p>
+                    <p><span>FUNCI&Oacute;N:</span> Analizar discos, dispositivos y sistemas complejos preservando la integridad de la evidencia.</p>
+                    <p><span>VENTAJA:</span> Amplia aceptaci&oacute;n en &aacute;mbitos judiciales y corporativos a nivel internacional.</p>
+                </div>
+
+                <div class="concepto-panel" id="herramienta-dd">
+                    <p class="codigo-sistema">[ HERRAMIENTA ]</p>
+                    <h3>dd</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Herramienta de l&iacute;nea de comandos utilizada para copiar datos de bajo nivel y generar im&aacute;genes forenses bit a bit.</p>
+                    <p><span>FUNCI&Oacute;N:</span> Crear copias exactas de dispositivos de almacenamiento sin depender de interfaces gr&aacute;ficas.</p>
+                    <p><span>VENTAJA:</span> Ligera, ampliamente disponible en sistemas Linux y muy utilizada en laboratorios forenses.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="preservacion" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 06 ]</p>
+            <h2 class="seccion">Preservaci&oacute;n</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="stage-selector">
+                <div class="stage-buttons">
+                    <button class="stage-button active" type="button" data-stage="preservacion-soporte">[01] SOPORTE ORIGINAL</button>
+                    <button class="stage-button" type="button" data-stage="preservacion-bloqueador">[02] BLOQUEADOR DE ESCRITURA</button>
+                    <button class="stage-button" type="button" data-stage="preservacion-almacenamiento">[03] ALMACENAMIENTO SEGURO</button>
+                    <button class="stage-button" type="button" data-stage="preservacion-copias">[04] COPIAS DE RESPALDO</button>
+                </div>
+
+                <div class="stage-panel active" id="preservacion-soporte">
+                    <p class="codigo-sistema">[ PRESERVACI&Oacute;N ]</p>
+                    <h3>Soporte Original</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Dispositivo o medio donde se encuentra inicialmente la evidencia digital.</p>
+                    <p><span>IMPORTANCIA:</span> Constituye la fuente primaria de informaci&oacute;n y debe preservarse sin alteraciones.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Mantener el dispositivo aislado, identificado y protegido durante toda la investigaci&oacute;n.</p>
+                </div>
+
+                <div class="stage-panel" id="preservacion-bloqueador">
+                    <p class="codigo-sistema">[ PRESERVACI&Oacute;N ]</p>
+                    <h3>Bloqueador de Escritura</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Dispositivo o mecanismo que impide modificaciones sobre el soporte original.</p>
+                    <p><span>IMPORTANCIA:</span> Protege la evidencia durante la adquisici&oacute;n.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Lectura segura de discos r&iacute;gidos y dispositivos USB.</p>
+                </div>
+
+                <div class="stage-panel" id="preservacion-almacenamiento">
+                    <p class="codigo-sistema">[ PRESERVACI&Oacute;N ]</p>
+                    <h3>Almacenamiento Seguro</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Resguardo controlado de soportes y copias forenses.</p>
+                    <p><span>IMPORTANCIA:</span> Evita accesos no autorizados o da&ntilde;os accidentales.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Conservaci&oacute;n en dep&oacute;sitos seguros o servidores restringidos.</p>
+                </div>
+
+                <div class="stage-panel" id="preservacion-copias">
+                    <p class="codigo-sistema">[ PRESERVACI&Oacute;N ]</p>
+                    <h3>Copias de Respaldo</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> R&eacute;plicas adicionales de evidencia obtenidas para contingencias.</p>
+                    <p><span>IMPORTANCIA:</span> Garantizan disponibilidad ante fallas o incidentes.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Mantener copias verificadas en ubicaciones separadas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="validez-tecnica" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 07 ]</p>
+            <h2 class="seccion">Validez T&eacute;cnica</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="stage-selector">
+                <div class="stage-buttons">
+                    <button class="stage-button active" type="button" data-stage="validez-integridad">[01] INTEGRIDAD</button>
+                    <button class="stage-button" type="button" data-stage="validez-reproducibilidad">[02] REPRODUCIBILIDAD</button>
+                    <button class="stage-button" type="button" data-stage="validez-documentacion">[03] DOCUMENTACI&Oacute;N</button>
+                    <button class="stage-button" type="button" data-stage="validez-trazabilidad">[04] TRAZABILIDAD</button>
+                </div>
+
+                <div class="stage-panel active" id="validez-integridad">
+                    <p class="codigo-sistema">[ VALIDEZ T&Eacute;CNICA ]</p>
+                    <h3>Integridad</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Garant&iacute;a de que la evidencia conserva exactamente el mismo contenido desde su adquisici&oacute;n.</p>
+                    <p><span>IMPORTANCIA:</span> Permite demostrar que el an&aacute;lisis se realiz&oacute; sobre informaci&oacute;n aut&eacute;ntica.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Verificaci&oacute;n mediante hashes y registros documentados de custodia.</p>
+                </div>
+
+                <div class="stage-panel" id="validez-reproducibilidad">
+                    <p class="codigo-sistema">[ VALIDEZ T&Eacute;CNICA ]</p>
+                    <h3>Reproducibilidad</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Capacidad de repetir un procedimiento obteniendo resultados consistentes.</p>
+                    <p><span>IMPORTANCIA:</span> Aumenta la confiabilidad del an&aacute;lisis.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Documentar herramientas, configuraciones y metodolog&iacute;a empleada.</p>
+                </div>
+
+                <div class="stage-panel" id="validez-documentacion">
+                    <p class="codigo-sistema">[ VALIDEZ T&Eacute;CNICA ]</p>
+                    <h3>Documentaci&oacute;n</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Registro detallado de todas las actividades realizadas durante la investigaci&oacute;n.</p>
+                    <p><span>IMPORTANCIA:</span> Permite auditar y reconstruir el procedimiento.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Actas, informes t&eacute;cnicos y registros de custodia.</p>
+                </div>
+
+                <div class="stage-panel" id="validez-trazabilidad">
+                    <p class="codigo-sistema">[ VALIDEZ T&Eacute;CNICA ]</p>
+                    <h3>Trazabilidad</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Seguimiento completo de la evidencia desde su obtenci&oacute;n hasta su presentaci&oacute;n.</p>
+                    <p><span>IMPORTANCIA:</span> Permite demostrar continuidad y control.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Registro de responsables, fechas y transferencias.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="caso-practico" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 08 ]</p>
+            <h2 class="seccion">Caso Pr&aacute;ctico</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="concepto-panel active">
+                <p class="codigo-sistema">[ CASO PR&Aacute;CTICO ]</p>
+                <h3>Incidente</h3>
+                <p class="codigo-sistema">==================</p>
+                <p>Se detect&oacute; actividad sospechosa en una notebook corporativa utilizada para la gesti&oacute;n de clientes. El an&aacute;lisis preliminar indic&oacute; conexiones remotas fuera del horario habitual de trabajo y accesos a directorios sensibles.</p>
+
+                <h3>Evidencia recolectada</h3>
+                <p class="codigo-sistema">==================</p>
+                <ul>
+                    <li>Disco SSD principal.</li>
+                    <li>Memoria RAM.</li>
+                    <li>Registros de eventos.</li>
+                    <li>Historial de conexiones.</li>
+                </ul>
+
+                <h3>Procedimiento de adquisici&oacute;n</h3>
+                <p class="codigo-sistema">==================</p>
+                <ol>
+                    <li>Identificaci&oacute;n del dispositivo.</li>
+                    <li>Documentaci&oacute;n fotogr&aacute;fica.</li>
+                    <li>C&aacute;lculo de hash inicial.</li>
+                    <li>Imagen forense bit a bit.</li>
+                    <li>Verificaci&oacute;n de integridad.</li>
+                    <li>Almacenamiento seguro.</li>
+                </ol>
+
+                <h3>Resultado</h3>
+                <p class="codigo-sistema">==================</p>
+                <p>La evidencia fue preservada correctamente y qued&oacute; disponible para an&aacute;lisis t&eacute;cnico sin alterar el soporte original.</p>
+            </div>
+        </section>
+
+        <section class="cierre-dossier">
+            <p class="codigo-sistema">[ CIERRE DEL EXPEDIENTE ]</p>
+            <h2 class="seccion">Resumen Final</h2>
+
+            <div class="terminal cierre-indicadores">
+                <div class="dato">
+                    ESTADO DEL DOSSIER
+                    <br>
+                    ARCHIVADO
+                </div>
+                <div class="dato">
+                    CLASIFICACI&Oacute;N
+                    <br>
+                    INFORM&Aacute;TICA FORENSE
+                </div>
+                <div class="dato">
+                    RIESGO PRINCIPAL
+                    <br>
+                    P&Eacute;RDIDA DE INTEGRIDAD
+                </div>
+                <div class="dato">
+                    &Aacute;REA
+                    <br>
+                    ADQUISICI&Oacute;N FORENSE
+                </div>
+            </div>
+        </section>
+
+        <div class="navegacion-expediente volver-archivo-final">
+            <a class="volver-archivo" href="index.html">[ VOLVER AL ARCHIVO ]</a>
+            <a class="volver-archivo volver-menu" href="#menu-dossier">[ VOLVER AL &Iacute;NDICE ]</a>
+        </div>
+
+        <footer>
+            FORSENSIA // REPOSITORIO DE EVIDENCIA DIGITAL // CIB
+        </footer>
+
+    </div>
+
+    <script>
+        const conceptGroups = document.querySelectorAll(".conceptos-forenses");
+
+        conceptGroups.forEach((group) => {
+            const conceptButtons = group.querySelectorAll(".concepto-button");
+            const conceptPanels = group.querySelectorAll(".concepto-panel");
+
+            conceptButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const selectedConcept = button.dataset.concepto;
+
+                    conceptButtons.forEach((item) => item.classList.remove("active"));
+                    conceptPanels.forEach((panel) => panel.classList.remove("active"));
+
+                    button.classList.add("active");
+                    group.querySelector(`#${selectedConcept}`).classList.add("active");
+                });
+            });
+        });
+
+        const stageGroups = document.querySelectorAll(".stage-selector");
+
+        stageGroups.forEach((group) => {
+            const stageButtons = group.querySelectorAll(".stage-button");
+            const stagePanels = group.querySelectorAll(".stage-panel");
+
+            stageButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const selectedStage = button.dataset.stage;
+
+                    stageButtons.forEach((item) => item.classList.remove("active"));
+                    stagePanels.forEach((panel) => panel.classList.remove("active"));
+
+                    button.classList.add("active");
+                    group.querySelector(`#${selectedStage}`).classList.add("active");
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

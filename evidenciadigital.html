@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>| Evidencia Digital</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="pagina-dossier">
+
+    <div class="contenedor-principal">
+
+        <div class="header-system">
+
+            <h1>EVIDENCIA DIGITAL</h1>
+
+            <p class="sistema codigo-expediente-titulo">
+                LEG-003
+            </p>
+
+            <p class="sistema">
+                DOSSIER DE DERECHO DIGITAL
+            </p>
+
+        </div>
+
+        <div class="ficha-tecnica-forense">
+
+            <p><span>EXPEDIENTE:</span> <strong>LEG-003</strong></p>
+            <p><span>CLASIFICACI&Oacute;N:</span> <strong>DERECHO DIGITAL</strong></p>
+            <p><span>ESTADO:</span> <strong>VERIFICADO</strong></p>
+            <p><span>FUENTE:</span> <strong>DIPLOMATURA EN CIBERCRIMEN</strong></p>
+            <p><span>&Uacute;LTIMA REVISI&Oacute;N:</span> <strong>JUNIO 2026</strong></p>
+
+        </div>
+
+        <p class="fuente-documental">
+            [FORENSIA] Registro documental sobre identificaci&oacute;n, preservaci&oacute;n, an&aacute;lisis y utilizaci&oacute;n de evidencia digital en investigaciones judiciales y t&eacute;cnicas.
+        </p>
+
+        <p class="acceso-modulos" id="menu-dossier">
+            > &Iacute;NDICE DEL DOSSIER
+        </p>
+
+        <nav class="indice-dossier">
+
+            <a href="#fundamentos"><span>[LEG-001]</span> Fundamentos</a>
+            <a href="#caracteristicas"><span>[LEG-002]</span> Caracter&iacute;sticas</a>
+            <a href="#fuentes-evidencia"><span>[LEG-003]</span> Fuentes de Evidencia</a>
+            <a href="#adquisicion"><span>[LEG-004]</span> Adquisici&oacute;n</a>
+            <a href="#admisibilidad"><span>[LEG-005]</span> Admisibilidad</a>
+            <a href="#cadena-custodia"><span>[LEG-006]</span> Cadena de Custodia</a>
+            <a href="#uso-judicial"><span>[LEG-007]</span> Uso Judicial</a>
+            <a href="#caso-practico"><span>[LEG-008]</span> Caso Pr&aacute;ctico</a>
+
+        </nav>
+
+        <section id="fundamentos" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 01 ]</p>
+            <h2 class="seccion">Fundamentos</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="conceptos-forenses">
+                <div class="conceptos-lista">
+                    <button class="concepto-button active" type="button" data-concepto="fundamento-evidencia">EVIDENCIA DIGITAL</button>
+                    <button class="concepto-button" type="button" data-concepto="fundamento-dato">DATO DIGITAL</button>
+                    <button class="concepto-button" type="button" data-concepto="fundamento-informacion">INFORMACI&Oacute;N ELECTR&Oacute;NICA</button>
+                    <button class="concepto-button" type="button" data-concepto="fundamento-fuente">FUENTE DE EVIDENCIA</button>
+                </div>
+
+                <div class="concepto-panel active" id="fundamento-evidencia">
+                    <p class="codigo-sistema">[ CONCEPTO ]</p>
+                    <h3>Evidencia Digital</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Informaci&oacute;n generada, transmitida, almacenada o procesada por medios digitales que puede resultar relevante para acreditar un hecho.</p>
+                    <p><span>IMPORTANCIA:</span> Permite reconstruir conductas, identificar intervenciones y sostener hip&oacute;tesis t&eacute;cnicas dentro de una investigaci&oacute;n.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Preservar archivos, registros, comunicaciones, metadatos y trazas del sistema con procedimientos verificables.</p>
+                </div>
+
+                <div class="concepto-panel" id="fundamento-dato">
+                    <p class="codigo-sistema">[ CONCEPTO ]</p>
+                    <h3>Dato Digital</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Unidad de informaci&oacute;n representada en formato digital, susceptible de tratamiento, almacenamiento o transmisi&oacute;n por sistemas inform&aacute;ticos.</p>
+                    <p><span>IMPORTANCIA:</span> Constituye la base t&eacute;cnica sobre la que se construyen archivos, registros, eventos y comunicaciones analizables.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Examinar contenido, metadatos, marcas temporales, identificadores y relaciones entre datos dentro de un soporte o servicio.</p>
+                </div>
+
+                <div class="concepto-panel" id="fundamento-informacion">
+                    <p class="codigo-sistema">[ CONCEPTO ]</p>
+                    <h3>Informaci&oacute;n Electr&oacute;nica</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Conjunto de datos digitales organizados que adquieren significado jur&iacute;dico, t&eacute;cnico o probatorio en un contexto determinado.</p>
+                    <p><span>IMPORTANCIA:</span> Permite interpretar hechos, comunicaciones, operaciones o decisiones registradas mediante tecnolog&iacute;as digitales.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Analizar correos, documentos, bases de datos, historiales, mensajes y registros asociados a una investigaci&oacute;n.</p>
+                </div>
+
+                <div class="concepto-panel" id="fundamento-fuente">
+                    <p class="codigo-sistema">[ CONCEPTO ]</p>
+                    <h3>Fuente de Evidencia</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Soporte, sistema, servicio o entorno desde el cual puede obtenerse evidencia digital relevante para el caso.</p>
+                    <p><span>IMPORTANCIA:</span> Determina el procedimiento de identificaci&oacute;n, preservaci&oacute;n, adquisici&oacute;n y documentaci&oacute;n de la evidencia.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Identificar computadoras, tel&eacute;fonos, servidores, cuentas, plataformas cloud, redes o dispositivos vinculados al hecho investigado.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="caracteristicas" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 02 ]</p>
+            <h2 class="seccion">Caracter&iacute;sticas</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="conceptos-forenses">
+                <div class="conceptos-lista">
+                    <button class="concepto-button active" type="button" data-concepto="caracteristica-intangibilidad">INTANGIBILIDAD</button>
+                    <button class="concepto-button" type="button" data-concepto="caracteristica-volatilidad">VOLATILIDAD</button>
+                    <button class="concepto-button" type="button" data-concepto="caracteristica-replicabilidad">REPLICABILIDAD</button>
+                    <button class="concepto-button" type="button" data-concepto="caracteristica-integridad">INTEGRIDAD</button>
+                </div>
+
+                <div class="concepto-panel active" id="caracteristica-intangibilidad">
+                    <p class="codigo-sistema">[ CARACTER&Iacute;STICA ]</p>
+                    <h3>Intangibilidad</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Condici&oacute;n por la cual la evidencia digital no posee forma f&iacute;sica directa, aunque pueda estar contenida en un soporte material.</p>
+                    <p><span>IMPORTANCIA:</span> Exige identificar correctamente el dato, el soporte y el sistema que lo contiene para evitar confusiones probatorias.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Documentar archivos, metadatos, rutas, cuentas, servicios y dispositivos asociados a la evidencia.</p>
+                </div>
+
+                <div class="concepto-panel" id="caracteristica-volatilidad">
+                    <p class="codigo-sistema">[ CARACTER&Iacute;STICA ]</p>
+                    <h3>Volatilidad</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Posibilidad de que ciertos datos digitales se modifiquen, sobrescriban o desaparezcan en poco tiempo.</p>
+                    <p><span>IMPORTANCIA:</span> Justifica acciones tempranas de preservaci&oacute;n para evitar p&eacute;rdida de registros relevantes.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Priorizar memoria, sesiones activas, logs rotativos, conexiones y datos alojados en servicios temporales.</p>
+                </div>
+
+                <div class="concepto-panel" id="caracteristica-replicabilidad">
+                    <p class="codigo-sistema">[ CARACTER&Iacute;STICA ]</p>
+                    <h3>Replicabilidad</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Capacidad de copiar datos digitales de manera exacta mediante procedimientos controlados.</p>
+                    <p><span>IMPORTANCIA:</span> Permite analizar copias verificadas sin intervenir directamente el soporte original.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Generar im&aacute;genes forenses, calcular hash y trabajar sobre copias de an&aacute;lisis documentadas.</p>
+                </div>
+
+                <div class="concepto-panel" id="caracteristica-integridad">
+                    <p class="codigo-sistema">[ CARACTER&Iacute;STICA ]</p>
+                    <h3>Integridad</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Garant&iacute;a de que la evidencia digital permanece completa y sin modificaciones no autorizadas.</p>
+                    <p><span>IMPORTANCIA:</span> Sostiene la confiabilidad t&eacute;cnica y la admisibilidad de la evidencia en un proceso.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Verificar valores hash, registrar custodia y documentar cada acceso, copia o transferencia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="fuentes-evidencia" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 03 ]</p>
+            <h2 class="seccion">Fuentes de Evidencia</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="conceptos-forenses">
+                <div class="conceptos-lista">
+                    <button class="concepto-button active" type="button" data-concepto="fuente-computadoras">COMPUTADORAS</button>
+                    <button class="concepto-button" type="button" data-concepto="fuente-smartphones">SMARTPHONES</button>
+                    <button class="concepto-button" type="button" data-concepto="fuente-servidores">SERVIDORES</button>
+                    <button class="concepto-button" type="button" data-concepto="fuente-cloud">CLOUD</button>
+                    <button class="concepto-button" type="button" data-concepto="fuente-redes">REDES</button>
+                </div>
+
+                <div class="concepto-panel active" id="fuente-computadoras">
+                    <p class="codigo-sistema">[ FUENTE ]</p>
+                    <h3>Computadoras</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Equipos de escritorio o port&aacute;tiles utilizados para almacenar, procesar o transmitir informaci&oacute;n digital.</p>
+                    <p><span>EJEMPLOS:</span> Notebooks, estaciones de trabajo, discos internos, perif&eacute;ricos y unidades externas conectadas.</p>
+                    <p><span>VALOR FORENSE:</span> Permiten reconstruir actividad de usuario, uso de archivos, ejecuci&oacute;n de programas y conexiones realizadas.</p>
+                    <p><span>EVIDENCIA HABITUAL:</span> Documentos, historial de navegaci&oacute;n, registros del sistema, accesos, metadatos y archivos eliminados.</p>
+                </div>
+
+                <div class="concepto-panel" id="fuente-smartphones">
+                    <p class="codigo-sistema">[ FUENTE ]</p>
+                    <h3>Smartphones</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Dispositivos m&oacute;viles capaces de almacenar comunicaciones, archivos, ubicaciones, fotograf&iacute;as y actividad de aplicaciones.</p>
+                    <p><span>EJEMPLOS:</span> Tel&eacute;fonos Android, iPhone, tablets con capacidad de comunicaci&oacute;n y dispositivos m&oacute;viles corporativos.</p>
+                    <p><span>VALOR FORENSE:</span> Permiten reconstruir comunicaciones, movimientos, relaciones entre usuarios y actividades realizadas desde aplicaciones.</p>
+                    <p><span>EVIDENCIA HABITUAL:</span> Mensajes, llamadas, fotograf&iacute;as, videos, geolocalizaci&oacute;n, redes sociales, correos electr&oacute;nicos y archivos adjuntos.</p>
+                </div>
+
+                <div class="concepto-panel" id="fuente-servidores">
+                    <p class="codigo-sistema">[ FUENTE ]</p>
+                    <h3>Servidores</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Sistemas destinados a prestar servicios, alojar aplicaciones, gestionar usuarios o almacenar informaci&oacute;n institucional.</p>
+                    <p><span>EJEMPLOS:</span> Servidores web, bases de datos, correo electr&oacute;nico, autenticaci&oacute;n, archivos y sistemas corporativos.</p>
+                    <p><span>VALOR FORENSE:</span> Registran actividad centralizada, accesos, eventos de seguridad y operaciones relevantes para una investigaci&oacute;n.</p>
+                    <p><span>EVIDENCIA HABITUAL:</span> Logs, registros de acceso, bases de datos, configuraciones, cuentas, eventos y respaldos.</p>
+                </div>
+
+                <div class="concepto-panel" id="fuente-cloud">
+                    <p class="codigo-sistema">[ FUENTE ]</p>
+                    <h3>Cloud</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Servicios remotos que almacenan, procesan o sincronizan datos mediante infraestructura distribuida.</p>
+                    <p><span>EJEMPLOS:</span> Almacenamiento en la nube, correo web, plataformas SaaS, repositorios, backups y entornos virtualizados.</p>
+                    <p><span>VALOR FORENSE:</span> Permiten obtener evidencia fuera del dispositivo f&iacute;sico, incluso cuando los datos locales fueron eliminados.</p>
+                    <p><span>EVIDENCIA HABITUAL:</span> Registros de acceso, archivos sincronizados, historial de cambios, metadatos, IPs, cuentas y actividad de usuario.</p>
+                </div>
+
+                <div class="concepto-panel" id="fuente-redes">
+                    <p class="codigo-sistema">[ FUENTE ]</p>
+                    <h3>Redes</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Infraestructura de comunicaci&oacute;n que registra tr&aacute;fico, conexiones, accesos y eventos entre sistemas.</p>
+                    <p><span>EJEMPLOS:</span> Routers, firewalls, switches, VPN, IDS, proxy, DNS y sistemas de monitoreo.</p>
+                    <p><span>VALOR FORENSE:</span> Permiten reconstruir rutas de acceso, origen de conexiones y actividad asociada a incidentes.</p>
+                    <p><span>EVIDENCIA HABITUAL:</span> Logs de red, IPs, puertos, capturas de paquetes, alertas, reglas, sesiones y eventos de seguridad.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="adquisicion" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 04 ]</p>
+            <h2 class="seccion">Adquisici&oacute;n</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="edrm-flow">
+                <div class="edrm-etapas">
+                    <button class="edrm-button active" type="button" data-edrm="adquisicion-copia">Copia Forense</button>
+                    <button class="edrm-button" type="button" data-edrm="adquisicion-imagen">Imagen Forense</button>
+                    <button class="edrm-button" type="button" data-edrm="adquisicion-hash">Hash</button>
+                    <button class="edrm-button" type="button" data-edrm="adquisicion-preservacion">Preservaci&oacute;n</button>
+                    <button class="edrm-button" type="button" data-edrm="adquisicion-memoria">Volcado de Memoria</button>
+                </div>
+
+                <div class="edrm-panel active" id="adquisicion-copia">
+                    <p class="codigo-sistema">[ ADQUISICI&Oacute;N ]</p>
+                    <h3>Copia Forense</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Duplicaci&oacute;n controlada de datos digitales realizada con procedimientos que evitan modificar la evidencia original.</p>
+                    <p><span>IMPORTANCIA:</span> Permite trabajar sobre una reproducci&oacute;n verificable, preservando el soporte fuente para futuras revisiones.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Copiar archivos, carpetas o soportes con herramientas forenses y documentar origen, destino, fecha y responsable.</p>
+                </div>
+
+                <div class="edrm-panel" id="adquisicion-imagen">
+                    <p class="codigo-sistema">[ ADQUISICI&Oacute;N ]</p>
+                    <h3>Imagen Forense</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Representaci&oacute;n bit a bit de un soporte digital, incluyendo datos visibles, eliminados, ocultos o no asignados.</p>
+                    <p><span>IMPORTANCIA:</span> Conserva la estructura completa del medio y permite an&aacute;lisis profundos sin alterar el dispositivo original.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Crear una imagen de discos, memorias o dispositivos mediante bloqueadores de escritura y software especializado.</p>
+                </div>
+
+                <div class="edrm-panel" id="adquisicion-hash">
+                    <p class="codigo-sistema">[ ADQUISICI&Oacute;N ]</p>
+                    <h3>Hash</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Valor alfanum&eacute;rico &uacute;nico generado mediante algoritmos criptogr&aacute;ficos para identificar una evidencia digital.</p>
+                    <p><span>IMPORTANCIA:</span> Permite verificar que la evidencia no fue modificada desde su adquisici&oacute;n hasta su an&aacute;lisis o presentaci&oacute;n.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Calcular y registrar valores MD5, SHA-1 o SHA-256 antes y despu&eacute;s de cada procedimiento relevante sobre la evidencia.</p>
+                </div>
+
+                <div class="edrm-panel" id="adquisicion-preservacion">
+                    <p class="codigo-sistema">[ ADQUISICI&Oacute;N ]</p>
+                    <h3>Preservaci&oacute;n</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Conjunto de medidas destinadas a conservar evidencia digital en condiciones de integridad, disponibilidad y trazabilidad.</p>
+                    <p><span>IMPORTANCIA:</span> Evita alteraciones, p&eacute;rdidas o accesos no documentados que puedan afectar el valor probatorio.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Aislar dispositivos, registrar custodia, proteger soportes, calcular hash y limitar intervenciones sobre el original.</p>
+                </div>
+
+                <div class="edrm-panel" id="adquisicion-memoria">
+                    <p class="codigo-sistema">[ ADQUISICI&Oacute;N ]</p>
+                    <h3>Volcado de Memoria</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Captura controlada del contenido de la memoria vol&aacute;til de un sistema en funcionamiento.</p>
+                    <p><span>IMPORTANCIA:</span> Permite preservar datos temporales que pueden perderse al apagar el equipo o finalizar una sesi&oacute;n.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Obtener procesos activos, conexiones, claves temporales, sesiones, malware residente y artefactos de ejecuci&oacute;n.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="admisibilidad" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 05 ]</p>
+            <h2 class="seccion">Admisibilidad</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="conceptos-forenses">
+                <div class="conceptos-lista">
+                    <button class="concepto-button active" type="button" data-concepto="admisibilidad-autenticidad">AUTENTICIDAD</button>
+                    <button class="concepto-button" type="button" data-concepto="admisibilidad-integridad">INTEGRIDAD</button>
+                    <button class="concepto-button" type="button" data-concepto="admisibilidad-trazabilidad">TRAZABILIDAD</button>
+                    <button class="concepto-button" type="button" data-concepto="admisibilidad-legalidad">LEGALIDAD</button>
+                </div>
+
+                <div class="concepto-panel active" id="admisibilidad-autenticidad">
+                    <p class="codigo-sistema">[ ADMISIBILIDAD ]</p>
+                    <h3>Autenticidad</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Condici&oacute;n que permite demostrar que la evidencia digital proviene del origen o sistema declarado.</p>
+                    <p><span>IMPORTANCIA:</span> Vincula la evidencia con el hecho investigado y reduce cuestionamientos sobre su procedencia.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Documentar origen, contexto de obtenci&oacute;n, responsables, identificadores, metadatos y registros asociados.</p>
+                </div>
+
+                <div class="concepto-panel" id="admisibilidad-integridad">
+                    <p class="codigo-sistema">[ ADMISIBILIDAD ]</p>
+                    <h3>Integridad</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Garant&iacute;a de que la evidencia no fue alterada desde su identificaci&oacute;n, adquisici&oacute;n o preservaci&oacute;n.</p>
+                    <p><span>IMPORTANCIA:</span> Sostiene la confiabilidad t&eacute;cnica del material ofrecido como prueba.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Verificar hashes, controlar accesos, conservar soportes y registrar cada intervenci&oacute;n realizada.</p>
+                </div>
+
+                <div class="concepto-panel" id="admisibilidad-trazabilidad">
+                    <p class="codigo-sistema">[ ADMISIBILIDAD ]</p>
+                    <h3>Trazabilidad</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Capacidad de reconstruir el recorrido completo de la evidencia digital desde su origen hasta su presentaci&oacute;n.</p>
+                    <p><span>IMPORTANCIA:</span> Permite demostrar continuidad, control y responsabilidad durante todo el proceso probatorio.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Mantener registros de custodia, transferencias, accesos, fechas, herramientas utilizadas y responsables.</p>
+                </div>
+
+                <div class="concepto-panel" id="admisibilidad-legalidad">
+                    <p class="codigo-sistema">[ ADMISIBILIDAD ]</p>
+                    <h3>Legalidad</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Cumplimiento de normas procesales, garant&iacute;as constitucionales y autorizaciones necesarias para obtener evidencia.</p>
+                    <p><span>IMPORTANCIA:</span> Evita nulidades, exclusiones probatorias o cuestionamientos sobre la validez del procedimiento.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Verificar orden judicial, consentimiento, competencia, cadena de custodia y proporcionalidad de la medida.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cadena-custodia" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 06 ]</p>
+            <h2 class="seccion">Cadena de Custodia</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="stage-selector">
+                <div class="stage-buttons">
+                    <button class="stage-button active" type="button" data-stage="custodia-registro">[01] REGISTRO</button>
+                    <button class="stage-button" type="button" data-stage="custodia-transferencias">[02] TRANSFERENCIAS</button>
+                    <button class="stage-button" type="button" data-stage="custodia-responsables">[03] RESPONSABLES</button>
+                    <button class="stage-button" type="button" data-stage="custodia-documentacion">[04] DOCUMENTACI&Oacute;N</button>
+                </div>
+
+                <div class="stage-panel active" id="custodia-registro">
+                    <p class="codigo-sistema">[ CUSTODIA ]</p>
+                    <h3>Registro</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Asiento documental de cada acci&oacute;n realizada sobre la evidencia digital desde su identificaci&oacute;n.</p>
+                    <p><span>IMPORTANCIA:</span> Permite reconstruir el historial de la evidencia y acreditar continuidad en su tratamiento.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Registrar fecha, hora, lugar, responsable, descripci&oacute;n del elemento y actividad realizada.</p>
+                </div>
+
+                <div class="stage-panel" id="custodia-transferencias">
+                    <p class="codigo-sistema">[ CUSTODIA ]</p>
+                    <h3>Transferencias</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Entrega controlada de evidencia entre personas, &aacute;reas, laboratorios o autoridades intervinientes.</p>
+                    <p><span>IMPORTANCIA:</span> Evita rupturas de trazabilidad y permite identificar qui&eacute;n tuvo la evidencia bajo su custodia.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Documentar origen, destino, motivo, fecha, hora, estado del soporte y firmas de entrega y recepci&oacute;n.</p>
+                </div>
+
+                <div class="stage-panel" id="custodia-responsables">
+                    <p class="codigo-sistema">[ CUSTODIA ]</p>
+                    <h3>Responsables</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Personas formalmente vinculadas a la obtenci&oacute;n, traslado, resguardo, an&aacute;lisis o presentaci&oacute;n de evidencia.</p>
+                    <p><span>IMPORTANCIA:</span> Permite atribuir deberes de conservaci&oacute;n y determinar responsabilidades ante incidentes o alteraciones.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Identificar custodios, peritos, auxiliares, autoridades receptoras y operadores con acceso autorizado.</p>
+                </div>
+
+                <div class="stage-panel" id="custodia-documentacion">
+                    <p class="codigo-sistema">[ CUSTODIA ]</p>
+                    <h3>Documentaci&oacute;n</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Conjunto de actas, formularios, registros, inventarios y constancias que respaldan el tratamiento de la evidencia.</p>
+                    <p><span>IMPORTANCIA:</span> Sostiene la autenticidad, integridad y admisibilidad de la evidencia digital en el proceso.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Incorporar actas de obtenci&oacute;n, registros de custodia, hashes, inventarios, observaciones y reportes t&eacute;cnicos.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="uso-judicial" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 07 ]</p>
+            <h2 class="seccion">Uso Judicial</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="conceptos-forenses">
+                <div class="conceptos-lista">
+                    <button class="concepto-button active" type="button" data-concepto="judicial-prueba">PRUEBA DIGITAL</button>
+                    <button class="concepto-button" type="button" data-concepto="judicial-pericia">PERICIA</button>
+                    <button class="concepto-button" type="button" data-concepto="judicial-informe">INFORME T&Eacute;CNICO</button>
+                    <button class="concepto-button" type="button" data-concepto="judicial-valor">VALOR PROBATORIO</button>
+                    <button class="concepto-button" type="button" data-concepto="judicial-audiencia">PRESENTACI&Oacute;N EN AUDIENCIA</button>
+                </div>
+
+                <div class="concepto-panel active" id="judicial-prueba">
+                    <p class="codigo-sistema">[ USO JUDICIAL ]</p>
+                    <h3>Prueba Digital</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Evidencia digital incorporada a un proceso para acreditar hechos, conductas, comunicaciones u operaciones relevantes.</p>
+                    <p><span>IMPORTANCIA:</span> Permite vincular actividad tecnol&oacute;gica con hip&oacute;tesis jur&iacute;dicas dentro de investigaciones penales o civiles.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Presentar archivos, registros, metadatos, comunicaciones o trazas con origen, integridad y custodia documentados.</p>
+                </div>
+
+                <div class="concepto-panel" id="judicial-pericia">
+                    <p class="codigo-sistema">[ USO JUDICIAL ]</p>
+                    <h3>Pericia</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Intervenci&oacute;n t&eacute;cnica realizada por un especialista para analizar evidencia digital y responder puntos periciales.</p>
+                    <p><span>IMPORTANCIA:</span> Traduce hallazgos t&eacute;cnicos en conclusiones comprensibles y evaluables por la autoridad judicial.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Examinar soportes, reconstruir actividad, verificar integridad y elaborar conclusiones fundadas en metodolog&iacute;a.</p>
+                </div>
+
+                <div class="concepto-panel" id="judicial-informe">
+                    <p class="codigo-sistema">[ USO JUDICIAL ]</p>
+                    <h3>Informe T&eacute;cnico</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Documento que expone procedimiento, herramientas, evidencias analizadas, hallazgos y conclusiones t&eacute;cnicas.</p>
+                    <p><span>IMPORTANCIA:</span> Formaliza el an&aacute;lisis y permite controlar la trazabilidad, reproducibilidad y fundamento de la intervenci&oacute;n.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Incorporar metodolog&iacute;a, hashes, capturas, registros, limitaciones, resultados y anexos verificables.</p>
+                </div>
+
+                <div class="concepto-panel" id="judicial-valor">
+                    <p class="codigo-sistema">[ USO JUDICIAL ]</p>
+                    <h3>Valor Probatorio</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Aptitud de la evidencia digital para contribuir a la convicci&oacute;n judicial sobre un hecho controvertido.</p>
+                    <p><span>IMPORTANCIA:</span> Depende de autenticidad, integridad, legalidad, pertinencia y correcta cadena de custodia.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Presentar evidencia con respaldo t&eacute;cnico, explicaci&oacute;n pericial y documentaci&oacute;n suficiente para su valoraci&oacute;n.</p>
+                </div>
+
+                <div class="concepto-panel" id="judicial-audiencia">
+                    <p class="codigo-sistema">[ USO JUDICIAL ]</p>
+                    <h3>Presentaci&oacute;n en Audiencia</h3>
+                    <p><span>DEFINICI&Oacute;N:</span> Exposici&oacute;n oral y t&eacute;cnica de evidencia digital ante tribunal, partes o autoridad interviniente.</p>
+                    <p><span>IMPORTANCIA:</span> Permite explicar metodolog&iacute;a, alcance, limitaciones y conclusiones de manera comprensible y controlable.</p>
+                    <p><span>APLICACI&Oacute;N PR&Aacute;CTICA:</span> Exhibir registros, hashes, capturas, l&iacute;neas de tiempo y conclusiones periciales con soporte documental.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="caso-practico" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 08 ]</p>
+            <h2 class="seccion">Caso Pr&aacute;ctico</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <div class="concepto-panel active">
+                <p class="codigo-sistema">[ CASO PR&Aacute;CTICO ]</p>
+                <h3>Incidente</h3>
+                <p class="codigo-sistema">==================</p>
+                <p>Acceso no autorizado a un servidor corporativo que almacenaba documentaci&oacute;n interna y registros de clientes.</p>
+
+                <h3>Evidencia recolectada</h3>
+                <p class="codigo-sistema">==================</p>
+                <ul>
+                    <li>Logs de autenticaci&oacute;n.</li>
+                    <li>Registros de acceso remoto.</li>
+                    <li>Capturas de tr&aacute;fico de red.</li>
+                    <li>Archivos modificados.</li>
+                    <li>Correos electr&oacute;nicos relacionados.</li>
+                </ul>
+
+                <h3>Cadena de custodia</h3>
+                <p class="codigo-sistema">==================</p>
+                <ol>
+                    <li>Identificaci&oacute;n de la evidencia.</li>
+                    <li>Preservaci&oacute;n inicial.</li>
+                    <li>Generaci&oacute;n de imagen forense.</li>
+                    <li>C&aacute;lculo y verificaci&oacute;n de hash.</li>
+                    <li>Registro de transferencias.</li>
+                    <li>An&aacute;lisis t&eacute;cnico.</li>
+                </ol>
+
+                <h3>Resultado</h3>
+                <p class="codigo-sistema">==================</p>
+                <p>La evidencia permiti&oacute; reconstruir la actividad realizada por la cuenta comprometida y conserv&oacute; autenticidad, integridad y trazabilidad suficientes para su utilizaci&oacute;n en un proceso judicial.</p>
+            </div>
+        </section>
+
+        <section class="cierre-dossier">
+            <p class="codigo-sistema">[ CIERRE DEL EXPEDIENTE ]</p>
+            <h2 class="seccion">Resumen Final</h2>
+
+            <p class="case-summary-text">
+                La evidencia digital constituye uno de los elementos centrales en las investigaciones modernas, permitiendo reconstruir hechos, identificar responsables y acreditar eventos mediante informaci&oacute;n almacenada, procesada o transmitida por sistemas tecnol&oacute;gicos.
+            </p>
+
+            <p class="case-summary-text">
+                Su valor probatorio depende de la preservaci&oacute;n de principios fundamentales como la integridad, autenticidad, trazabilidad y legalidad durante todo el proceso de adquisici&oacute;n, an&aacute;lisis y presentaci&oacute;n.
+            </p>
+
+            <p class="case-summary-text">
+                La correcta gesti&oacute;n de la evidencia digital, junto con el mantenimiento de la cadena de custodia y la aplicaci&oacute;n de procedimientos forenses verificables, permite que la informaci&oacute;n obtenida pueda ser utilizada con validez t&eacute;cnica y jur&iacute;dica en &aacute;mbitos judiciales, administrativos y corporativos.
+            </p>
+
+            <div class="terminal cierre-indicadores">
+                <div class="dato">
+                    ESTADO DEL DOSSIER
+                    <br>
+                    ARCHIVADO
+                </div>
+                <div class="dato">
+                    CLASIFICACI&Oacute;N
+                    <br>
+                    DERECHO DIGITAL
+                </div>
+                <div class="dato">
+                    RIESGO PRINCIPAL
+                    <br>
+                    P&Eacute;RDIDA DE INTEGRIDAD
+                </div>
+                <div class="dato">
+                    &Aacute;REA
+                    <br>
+                    EVIDENCIA DIGITAL
+                </div>
+            </div>
+        </section>
+
+        <div class="navegacion-expediente volver-archivo-final">
+            <a class="volver-archivo" href="index.html">[ VOLVER AL ARCHIVO ]</a>
+            <a class="volver-archivo volver-menu" href="#menu-dossier">[ VOLVER AL &Iacute;NDICE ]</a>
+        </div>
+
+        <footer>
+            FORSENSIA // REPOSITORIO DE EVIDENCIA DIGITAL // CIB
+        </footer>
+
+    </div>
+
+    <script>
+        const conceptGroups = document.querySelectorAll(".conceptos-forenses");
+
+        conceptGroups.forEach((group) => {
+            const conceptButtons = group.querySelectorAll(".concepto-button");
+            const conceptPanels = group.querySelectorAll(".concepto-panel");
+
+            conceptButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const selectedConcept = button.dataset.concepto;
+
+                    conceptButtons.forEach((item) => item.classList.remove("active"));
+                    conceptPanels.forEach((panel) => panel.classList.remove("active"));
+
+                    button.classList.add("active");
+                    group.querySelector(`#${selectedConcept}`).classList.add("active");
+                });
+            });
+        });
+
+        const edrmGroups = document.querySelectorAll(".edrm-flow");
+
+        edrmGroups.forEach((group) => {
+            const edrmButtons = group.querySelectorAll(".edrm-button");
+            const edrmPanels = group.querySelectorAll(".edrm-panel");
+
+            edrmButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const selectedStage = button.dataset.edrm;
+
+                    edrmButtons.forEach((item) => item.classList.remove("active"));
+                    edrmPanels.forEach((panel) => panel.classList.remove("active"));
+
+                    button.classList.add("active");
+                    group.querySelector(`#${selectedStage}`).classList.add("active");
+                });
+            });
+        });
+
+        const stageGroups = document.querySelectorAll(".stage-selector");
+
+        stageGroups.forEach((group) => {
+            const stageButtons = group.querySelectorAll(".stage-button");
+            const stagePanels = group.querySelectorAll(".stage-panel");
+
+            stageButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const selectedStage = button.dataset.stage;
+
+                    stageButtons.forEach((item) => item.classList.remove("active"));
+                    stagePanels.forEach((panel) => panel.classList.remove("active"));
+
+                    button.classList.add("active");
+                    group.querySelector(`#${selectedStage}`).classList.add("active");
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

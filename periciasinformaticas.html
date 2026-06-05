@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>| Pericias Inform&aacute;ticas</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="pagina-dossier">
+
+    <div class="contenedor-principal">
+
+        <div class="header-system">
+
+            <h1>PERICIAS INFORM&Aacute;TICAS</h1>
+
+            <p class="sistema codigo-expediente-titulo">
+                FOR-001
+            </p>
+
+            <p class="sistema">
+                DOSSIER DE INFORM&Aacute;TICA FORENSE
+            </p>
+
+        </div>
+
+        <div class="ficha-tecnica-forense">
+
+            <p><span>EXPEDIENTE:</span> <strong>FOR-001</strong></p>
+            <p><span>CLASIFICACI&Oacute;N:</span> <strong>INFORM&Aacute;TICA FORENSE</strong></p>
+            <p><span>ESTADO:</span> <strong>VERIFICADO</strong></p>
+            <p><span>FUENTE:</span> <strong>DIPLOMATURA EN CIBERCRIMEN</strong></p>
+            <p><span>&Uacute;LTIMA REVISI&Oacute;N:</span> <strong>MAYO 2026</strong></p>
+
+        </div>
+
+        <p class="fuente-documental">
+            [FUENTE] Registro informativo sobre preservaci&oacute;n, an&aacute;lisis, documentaci&oacute;n
+            y presentaci&oacute;n de evidencia digital.
+        </p>
+
+        <p class="acceso-modulos" id="menu-dossier">
+            > &Iacute;NDICE DEL DOSSIER
+        </p>
+
+        <nav class="indice-dossier">
+
+            <a href="#conceptos-fundamentales"><span>[FOR-001]</span> Conceptos Fundamentales</a>
+            <a href="#informe-pericial"><span>[FOR-005]</span> Informe Pericial</a>
+            <a href="#perfiles-profesionales"><span>[FOR-002]</span> Perfiles Profesionales</a>
+            <a href="#preservacion-evidencia"><span>[FOR-006]</span> Preservaci&oacute;n de Evidencia</a>
+            <a href="#ciclo-del-peritaje"><span>[FOR-003]</span> Ciclo del Peritaje</a>
+            <a href="#marco-legal"><span>[FOR-007]</span> Marco Legal</a>
+            <a href="#modelo-edrm"><span>[FOR-004]</span> Modelo EDRM</a>
+            <a href="#auditoria-vs-informatica-forense"><span>[FOR-008]</span> Auditor&iacute;a vs Inform&aacute;tica Forense</a>
+
+        </nav>
+
+        <section id="conceptos-fundamentales" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 01 ]</p>
+            <h2 class="seccion">Conceptos Fundamentales</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <p class="registro-texto">
+                La inform&aacute;tica forense permite identificar, preservar, analizar y presentar
+                evidencia digital sin alterar su integridad.
+            </p>
+
+            <div class="conceptos-forenses">
+
+                <div class="conceptos-lista">
+                    <button class="concepto-button active" type="button" data-concepto="concepto-custodia">Cadena de Custodia</button>
+                    <button class="concepto-button" type="button" data-concepto="concepto-edrm">Modelo EDRM</button>
+                    <button class="concepto-button" type="button" data-concepto="concepto-informe">Informe Pericial</button>
+                    <button class="concepto-button" type="button" data-concepto="concepto-copia">Copia Forense</button>
+                </div>
+
+                <div class="concepto-panel active" id="concepto-custodia">
+                    <p class="codigo-sistema">[ CONCEPTO FORENSE ]</p>
+                    <h3>Cadena de Custodia</h3>
+                    <p>
+                        <span>DEFINICI&Oacute;N:</span> Registro documentado de cada persona, lugar y acci&oacute;n vinculada con la evidencia.
+                    </p>
+                    <p>
+                        <span>OBJETIVO:</span> Garantizar trazabilidad desde la recolecci&oacute;n hasta la presentaci&oacute;n.
+                    </p>
+                    <p>
+                        <span>IMPORTANCIA:</span> Permite demostrar que la evidencia no fue alterada ni contaminada.
+                    </p>
+                </div>
+
+                <div class="concepto-panel" id="concepto-edrm">
+                    <p class="codigo-sistema">[ CONCEPTO FORENSE ]</p>
+                    <h3>Modelo EDRM</h3>
+                    <p>
+                        <span>DEFINICI&Oacute;N:</span> Modelo de referencia para gestionar evidencia electr&oacute;nica en etapas controladas.
+                    </p>
+                    <p>
+                        <span>OBJETIVO:</span> Ordenar el flujo de identificaci&oacute;n, preservaci&oacute;n, an&aacute;lisis y presentaci&oacute;n.
+                    </p>
+                    <p>
+                        <span>IMPORTANCIA:</span> Aporta m&eacute;todo, consistencia y documentaci&oacute;n al proceso forense.
+                    </p>
+                </div>
+
+                <div class="concepto-panel" id="concepto-informe">
+                    <p class="codigo-sistema">[ CONCEPTO FORENSE ]</p>
+                    <h3>Informe Pericial</h3>
+                    <p>
+                        <span>DEFINICI&Oacute;N:</span> Documento t&eacute;cnico donde se exponen metodolog&iacute;a, hallazgos y conclusiones.
+                    </p>
+                    <p>
+                        <span>OBJETIVO:</span> Responder los puntos periciales con respaldo verificable.
+                    </p>
+                    <p>
+                        <span>IMPORTANCIA:</span> Traduce el an&aacute;lisis t&eacute;cnico en una pieza comprensible para el proceso judicial.
+                    </p>
+                </div>
+
+                <div class="concepto-panel" id="concepto-copia">
+                    <p class="codigo-sistema">[ CONCEPTO FORENSE ]</p>
+                    <h3>Copia Forense</h3>
+                    <p>
+                        <span>DEFINICI&Oacute;N:</span> Duplicado bit a bit de un soporte digital realizado con controles de integridad.
+                    </p>
+                    <p>
+                        <span>OBJETIVO:</span> Analizar la informaci&oacute;n sin intervenir directamente sobre el original.
+                    </p>
+                    <p>
+                        <span>IMPORTANCIA:</span> Preserva la fuente primaria y permite repetir o verificar el an&aacute;lisis.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="perfiles-profesionales" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 02 ]</p>
+            <h2 class="seccion">Perfiles Profesionales</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <p class="registro-texto">
+                El trabajo pericial exige criterio t&eacute;cnico, documentaci&oacute;n precisa,
+                conocimiento legal y capacidad para explicar hallazgos de forma verificable.
+            </p>
+
+            <div class="perfiles-grid">
+
+                <div class="perfil-card">
+                    <h3>PERITO OFICIAL</h3>
+                    <p><span>DESIGNACI&Oacute;N:</span> Integra cuerpos periciales oficiales.</p>
+                    <p><span>FUNCI&Oacute;N:</span> Realiza an&aacute;lisis t&eacute;cnicos requeridos por autoridad judicial.</p>
+                    <p><span>PARTICIPACI&Oacute;N:</span> Act&uacute;a como auxiliar oficial del proceso.</p>
+                </div>
+
+                <div class="perfil-card">
+                    <h3>PERITO DE OFICIO</h3>
+                    <p><span>DESIGNACI&Oacute;N:</span> Es nombrado por el tribunal en una causa.</p>
+                    <p><span>FUNCI&Oacute;N:</span> Eval&uacute;a evidencia y emite conclusiones imparciales.</p>
+                    <p><span>PARTICIPACI&Oacute;N:</span> Presenta informe y puede declarar en audiencia.</p>
+                </div>
+
+                <div class="perfil-card">
+                    <h3>CONSULTOR T&Eacute;CNICO</h3>
+                    <p><span>DESIGNACI&Oacute;N:</span> Es propuesto por una de las partes.</p>
+                    <p><span>FUNCI&Oacute;N:</span> Asesora, revisa pericias y aporta criterio t&eacute;cnico.</p>
+                    <p><span>PARTICIPACI&Oacute;N:</span> Controla actuaciones y acompa&ntilde;a la estrategia probatoria.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="ciclo-del-peritaje" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 03 ]</p>
+            <h2 class="seccion">Ciclo del Peritaje</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <p class="registro-texto">
+                El proceso pericial avanza por etapas controladas, desde la recepci&oacute;n inicial
+                hasta la exposici&oacute;n oral de los resultados.
+            </p>
+
+            <div class="stage-selector">
+
+                <div class="stage-buttons">
+                    <button class="stage-button active" type="button" data-stage="stage-01">[01] ETAPA INICIAL</button>
+                    <button class="stage-button" type="button" data-stage="stage-02">[02] REVISI&Oacute;N</button>
+                    <button class="stage-button" type="button" data-stage="stage-03">[03] ETAPA ADMINISTRATIVA</button>
+                    <button class="stage-button" type="button" data-stage="stage-04">[04] JUICIO ORAL</button>
+                </div>
+
+                <div class="stage-panel active" id="stage-01">
+                    <p class="codigo-sistema">[ ETAPA 01 ]</p>
+                    <h3>ETAPA INICIAL</h3>
+                    <p><span>OBJETIVO:</span> Delimitar el caso, el alcance t&eacute;cnico y la evidencia disponible.</p>
+                    <p><span>ACTIVIDADES PRINCIPALES:</span></p>
+                    <ul>
+                        <li>Recepci&oacute;n del requerimiento pericial.</li>
+                        <li>Identificaci&oacute;n preliminar de dispositivos y fuentes digitales.</li>
+                        <li>Definici&oacute;n de alcance, riesgos y prioridades.</li>
+                    </ul>
+                </div>
+
+                <div class="stage-panel" id="stage-02">
+                    <p class="codigo-sistema">[ ETAPA 02 ]</p>
+                    <h3>REVISI&Oacute;N</h3>
+                    <p><span>OBJETIVO:</span> Verificar integridad, pertinencia y condiciones de an&aacute;lisis.</p>
+                    <p><span>ACTIVIDADES PRINCIPALES:</span></p>
+                    <ul>
+                        <li>Control de cadena de custodia.</li>
+                        <li>Validaci&oacute;n de copias forenses y hashes.</li>
+                        <li>Organizaci&oacute;n del material para an&aacute;lisis.</li>
+                    </ul>
+                </div>
+
+                <div class="stage-panel" id="stage-03">
+                    <p class="codigo-sistema">[ ETAPA 03 ]</p>
+                    <h3>ETAPA ADMINISTRATIVA</h3>
+                    <p><span>OBJETIVO:</span> Formalizar actuaciones, resultados y documentaci&oacute;n del proceso.</p>
+                    <p><span>ACTIVIDADES PRINCIPALES:</span></p>
+                    <ul>
+                        <li>Registro de tareas realizadas.</li>
+                        <li>Organizaci&oacute;n de hallazgos y anexos.</li>
+                        <li>Preparaci&oacute;n del informe pericial.</li>
+                    </ul>
+                </div>
+
+                <div class="stage-panel" id="stage-04">
+                    <p class="codigo-sistema">[ ETAPA 04 ]</p>
+                    <h3>JUICIO ORAL</h3>
+                    <p><span>OBJETIVO:</span> Exponer y sostener t&eacute;cnicamente las conclusiones periciales.</p>
+                    <p><span>ACTIVIDADES PRINCIPALES:</span></p>
+                    <ul>
+                        <li>Presentaci&oacute;n de metodolog&iacute;a y hallazgos.</li>
+                        <li>Respuesta a preguntas de las partes.</li>
+                        <li>Defensa t&eacute;cnica del informe emitido.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="modelo-edrm" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 04 ]</p>
+            <h2 class="seccion">Modelo EDRM</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <p class="registro-texto">
+                El modelo EDRM ordena el tratamiento de evidencia electr&oacute;nica mediante fases
+                sucesivas y documentables.
+            </p>
+
+            <div class="edrm-flow">
+
+                <div class="edrm-etapas">
+                    <button class="edrm-button active" type="button" data-edrm="edrm-gobierno">Gobierno de la Informaci&oacute;n</button>
+                    <button class="edrm-button" type="button" data-edrm="edrm-identificacion">Identificaci&oacute;n</button>
+                    <button class="edrm-button" type="button" data-edrm="edrm-preservacion">Preservaci&oacute;n</button>
+                    <button class="edrm-button" type="button" data-edrm="edrm-recoleccion">Recolecci&oacute;n</button>
+                    <button class="edrm-button" type="button" data-edrm="edrm-procesamiento">Procesamiento</button>
+                    <button class="edrm-button" type="button" data-edrm="edrm-revision">Revisi&oacute;n</button>
+                    <button class="edrm-button" type="button" data-edrm="edrm-analisis">An&aacute;lisis</button>
+                    <button class="edrm-button" type="button" data-edrm="edrm-produccion">Producci&oacute;n</button>
+                    <button class="edrm-button" type="button" data-edrm="edrm-presentacion">Presentaci&oacute;n</button>
+                </div>
+
+                <div class="edrm-panel active" id="edrm-gobierno">
+                    <p class="codigo-sistema">[ ETAPA EDRM ]</p>
+                    <h3>Gobierno de la Informaci&oacute;n</h3>
+                    <p><span>FUNCI&Oacute;N:</span> Define pol&iacute;ticas, responsables y criterios de gesti&oacute;n documental.</p>
+                    <p><span>PROP&Oacute;SITO:</span> Reducir riesgos y preparar la informaci&oacute;n para eventuales investigaciones.</p>
+                </div>
+
+                <div class="edrm-panel" id="edrm-identificacion">
+                    <p class="codigo-sistema">[ ETAPA EDRM ]</p>
+                    <h3>Identificaci&oacute;n</h3>
+                    <p><span>FUNCI&Oacute;N:</span> Localiza fuentes potenciales de evidencia electr&oacute;nica.</p>
+                    <p><span>PROP&Oacute;SITO:</span> Determinar qu&eacute; informaci&oacute;n puede ser relevante para el caso.</p>
+                </div>
+
+                <div class="edrm-panel" id="edrm-preservacion">
+                    <p class="codigo-sistema">[ ETAPA EDRM ]</p>
+                    <h3>Preservaci&oacute;n</h3>
+                    <p><span>FUNCI&Oacute;N:</span> Protege la evidencia contra alteraciones, p&eacute;rdidas o contaminaci&oacute;n.</p>
+                    <p><span>PROP&Oacute;SITO:</span> Mantener integridad y disponibilidad durante todo el proceso.</p>
+                </div>
+
+                <div class="edrm-panel" id="edrm-recoleccion">
+                    <p class="codigo-sistema">[ ETAPA EDRM ]</p>
+                    <h3>Recolecci&oacute;n</h3>
+                    <p><span>FUNCI&Oacute;N:</span> Obtiene datos, soportes y registros mediante procedimientos controlados.</p>
+                    <p><span>PROP&Oacute;SITO:</span> Incorporar evidencia de forma documentada y verificable.</p>
+                </div>
+
+                <div class="edrm-panel" id="edrm-procesamiento">
+                    <p class="codigo-sistema">[ ETAPA EDRM ]</p>
+                    <h3>Procesamiento</h3>
+                    <p><span>FUNCI&Oacute;N:</span> Organiza, filtra y normaliza informaci&oacute;n recolectada.</p>
+                    <p><span>PROP&Oacute;SITO:</span> Facilitar una revisi&oacute;n eficiente y reducir volumen irrelevante.</p>
+                </div>
+
+                <div class="edrm-panel" id="edrm-revision">
+                    <p class="codigo-sistema">[ ETAPA EDRM ]</p>
+                    <h3>Revisi&oacute;n</h3>
+                    <p><span>FUNCI&Oacute;N:</span> Examina informaci&oacute;n procesada para detectar elementos pertinentes.</p>
+                    <p><span>PROP&Oacute;SITO:</span> Separar material relevante, duplicado, sensible o descartable.</p>
+                </div>
+
+                <div class="edrm-panel" id="edrm-analisis">
+                    <p class="codigo-sistema">[ ETAPA EDRM ]</p>
+                    <h3>An&aacute;lisis</h3>
+                    <p><span>FUNCI&Oacute;N:</span> Interpreta datos, correlaciona eventos y extrae hallazgos t&eacute;cnicos.</p>
+                    <p><span>PROP&Oacute;SITO:</span> Construir conclusiones verificables a partir de la evidencia.</p>
+                </div>
+
+                <div class="edrm-panel" id="edrm-produccion">
+                    <p class="codigo-sistema">[ ETAPA EDRM ]</p>
+                    <h3>Producci&oacute;n</h3>
+                    <p><span>FUNCI&Oacute;N:</span> Prepara resultados y evidencia en formatos aptos para entrega formal.</p>
+                    <p><span>PROP&Oacute;SITO:</span> Presentar material claro, controlado y utilizable por las partes.</p>
+                </div>
+
+                <div class="edrm-panel" id="edrm-presentacion">
+                    <p class="codigo-sistema">[ ETAPA EDRM ]</p>
+                    <h3>Presentaci&oacute;n</h3>
+                    <p><span>FUNCI&Oacute;N:</span> Expone metodolog&iacute;a, hallazgos y conclusiones ante la autoridad o audiencia.</p>
+                    <p><span>PROP&Oacute;SITO:</span> Comunicar el resultado de forma comprensible, trazable y defendible.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="informe-pericial" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 05 ]</p>
+            <h2 class="seccion">Informe Pericial</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <p class="registro-texto">
+                El informe pericial comunica el procedimiento aplicado, los hallazgos obtenidos
+                y las conclusiones t&eacute;cnicas del an&aacute;lisis.
+            </p>
+
+            <div class="dictamen-selector">
+
+                <div class="dictamen-lista">
+                    <button class="dictamen-button active" type="button" data-dictamen="dictamen-encabezamiento">01 Encabezamiento</button>
+                    <button class="dictamen-button" type="button" data-dictamen="dictamen-desarrollo">02 Desarrollo</button>
+                    <button class="dictamen-button" type="button" data-dictamen="dictamen-conclusiones">03 Conclusiones</button>
+                    <button class="dictamen-button" type="button" data-dictamen="dictamen-petitorio">04 Petitorio</button>
+                    <button class="dictamen-button" type="button" data-dictamen="dictamen-firma">05 Firma</button>
+                </div>
+
+                <div class="dictamen-panel active" id="dictamen-encabezamiento">
+                    <p class="codigo-sistema">[ DICTAMEN 01 ]</p>
+                    <h3>Encabezamiento</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Identifica causa, partes, perito interviniente y objeto de la pericia.</p>
+                    <p><span>FINALIDAD:</span> Ubicar formalmente el dictamen dentro del expediente.</p>
+                </div>
+
+                <div class="dictamen-panel" id="dictamen-desarrollo">
+                    <p class="codigo-sistema">[ DICTAMEN 02 ]</p>
+                    <h3>Desarrollo</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Expone metodolog&iacute;a, tareas, herramientas y evidencia analizada.</p>
+                    <p><span>FINALIDAD:</span> Documentar el procedimiento t&eacute;cnico aplicado.</p>
+                </div>
+
+                <div class="dictamen-panel" id="dictamen-conclusiones">
+                    <p class="codigo-sistema">[ DICTAMEN 03 ]</p>
+                    <h3>Conclusiones</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Presenta hallazgos t&eacute;cnicos y respuestas a los puntos periciales.</p>
+                    <p><span>FINALIDAD:</span> Comunicar resultados verificables del an&aacute;lisis.</p>
+                </div>
+
+                <div class="dictamen-panel" id="dictamen-petitorio">
+                    <p class="codigo-sistema">[ DICTAMEN 04 ]</p>
+                    <h3>Petitorio</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Formula la solicitud procesal de incorporaci&oacute;n del informe.</p>
+                    <p><span>FINALIDAD:</span> Dar cierre formal a la presentaci&oacute;n pericial.</p>
+                </div>
+
+                <div class="dictamen-panel" id="dictamen-firma">
+                    <p class="codigo-sistema">[ DICTAMEN 05 ]</p>
+                    <h3>Firma</h3>
+                    <p><span>DESCRIPCI&Oacute;N:</span> Incluye firma, identificaci&oacute;n profesional y datos del perito.</p>
+                    <p><span>FINALIDAD:</span> Acreditar autor&iacute;a y responsabilidad t&eacute;cnica del dictamen.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="preservacion-evidencia" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 06 ]</p>
+            <h2 class="seccion">Preservaci&oacute;n de Evidencia</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <p class="registro-texto">
+                La preservaci&oacute;n busca evitar modificaciones sobre el soporte original y
+                mantener trazabilidad sobre cada intervenci&oacute;n.
+            </p>
+
+            <div class="procedimientos-selector">
+
+                <div class="procedimientos-lista">
+                    <button class="procedimiento-button active" type="button" data-procedimiento="procedimiento-aislamiento">&#10003; Aislamiento del equipo</button>
+                    <button class="procedimiento-button" type="button" data-procedimiento="procedimiento-fotografico">&#10003; Registro fotogr&aacute;fico</button>
+                    <button class="procedimiento-button" type="button" data-procedimiento="procedimiento-custodia">&#10003; Cadena de custodia</button>
+                    <button class="procedimiento-button" type="button" data-procedimiento="procedimiento-clonacion">&#10003; Clonaci&oacute;n forense</button>
+                    <button class="procedimiento-button" type="button" data-procedimiento="procedimiento-configuraciones">&#10003; Preservaci&oacute;n de configuraciones</button>
+                    <button class="procedimiento-button" type="button" data-procedimiento="procedimiento-documentacion">&#10003; Documentaci&oacute;n</button>
+                </div>
+
+                <div class="procedimiento-panel active" id="procedimiento-aislamiento">
+                    <p class="codigo-sistema">[ PROCEDIMIENTO ]</p>
+                    <h3>Aislamiento del equipo</h3>
+                    <p><span>OBJETIVO:</span> Desconectar el equipo de redes y fuentes externas no controladas.</p>
+                    <p><span>RIESGO QUE EVITA:</span> Alteraci&oacute;n remota, sincronizaci&oacute;n autom&aacute;tica o borrado de datos.</p>
+                </div>
+
+                <div class="procedimiento-panel" id="procedimiento-fotografico">
+                    <p class="codigo-sistema">[ PROCEDIMIENTO ]</p>
+                    <h3>Registro fotogr&aacute;fico</h3>
+                    <p><span>OBJETIVO:</span> Documentar estado inicial, conexiones, pantalla y entorno de hallazgo.</p>
+                    <p><span>RIESGO QUE EVITA:</span> P&eacute;rdida de contexto, dudas sobre ubicaci&oacute;n o manipulaci&oacute;n previa.</p>
+                </div>
+
+                <div class="procedimiento-panel" id="procedimiento-custodia">
+                    <p class="codigo-sistema">[ PROCEDIMIENTO ]</p>
+                    <h3>Cadena de custodia</h3>
+                    <p><span>OBJETIVO:</span> Registrar responsables, fechas, traslados e intervenciones sobre la evidencia.</p>
+                    <p><span>RIESGO QUE EVITA:</span> Cuestionamientos sobre integridad, origen o continuidad probatoria.</p>
+                </div>
+
+                <div class="procedimiento-panel" id="procedimiento-clonacion">
+                    <p class="codigo-sistema">[ PROCEDIMIENTO ]</p>
+                    <h3>Clonaci&oacute;n forense</h3>
+                    <p><span>OBJETIVO:</span> Generar una copia bit a bit para trabajar sin intervenir el original.</p>
+                    <p><span>RIESGO QUE EVITA:</span> Modificaci&oacute;n accidental, corrupci&oacute;n o p&eacute;rdida del soporte fuente.</p>
+                </div>
+
+                <div class="procedimiento-panel" id="procedimiento-configuraciones">
+                    <p class="codigo-sistema">[ PROCEDIMIENTO ]</p>
+                    <h3>Preservaci&oacute;n de configuraciones</h3>
+                    <p><span>OBJETIVO:</span> Registrar par&aacute;metros, cuentas, conexiones y configuraciones relevantes.</p>
+                    <p><span>RIESGO QUE EVITA:</span> P&eacute;rdida de datos vol&aacute;tiles o cambios que alteren el estado original.</p>
+                </div>
+
+                <div class="procedimiento-panel" id="procedimiento-documentacion">
+                    <p class="codigo-sistema">[ PROCEDIMIENTO ]</p>
+                    <h3>Documentaci&oacute;n</h3>
+                    <p><span>OBJETIVO:</span> Registrar acciones, herramientas, tiempos y resultados obtenidos.</p>
+                    <p><span>RIESGO QUE EVITA:</span> Falta de trazabilidad, errores de interpretaci&oacute;n o nulidad probatoria.</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="marco-legal" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 07 ]</p>
+            <h2 class="seccion">Marco Legal</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <p class="registro-texto">
+                Las referencias legales ubican la pr&aacute;ctica forense dentro de un marco de
+                delitos inform&aacute;ticos, firma digital, datos personales y protecci&oacute;n jur&iacute;dica.
+            </p>
+
+            <div class="panel-legal">
+
+                <div class="registro-legal">
+                    <p class="codigo-sistema">[ REGISTRO LEGAL ]</p>
+                    <h3>Ley 26.388</h3>
+                </div>
+
+                <div class="registro-legal">
+                    <p class="codigo-sistema">[ REGISTRO LEGAL ]</p>
+                    <h3>Ley 25.036</h3>
+                </div>
+
+                <div class="registro-legal">
+                    <p class="codigo-sistema">[ REGISTRO LEGAL ]</p>
+                    <h3>Ley 25.506</h3>
+                </div>
+
+                <div class="registro-legal">
+                    <p class="codigo-sistema">[ REGISTRO LEGAL ]</p>
+                    <h3>Ley 25.326</h3>
+                </div>
+
+            </div>
+
+            <div class="legal-dossier-panel" id="legal-dossier-panel">
+                <p class="codigo-sistema">DOSSIER LEGAL</p>
+                <p class="codigo-sistema" id="legal-law-number">LEY 26.388</p>
+                <h3 id="legal-title">Delitos Inform&aacute;ticos</h3>
+                <ul id="legal-summary">
+                    <li>Incorpora los delitos inform&aacute;ticos al C&oacute;digo Penal Argentino.</li>
+                    <li>Regula acceso indebido, fraude inform&aacute;tico y da&ntilde;o a sistemas.</li>
+                    <li>Protege comunicaciones electr&oacute;nicas y privacidad digital.</li>
+                    <li>Incluye delitos vinculados a menores y material sexual il&iacute;cito.</li>
+                </ul>
+                <p class="status-text" id="legal-status">ESTADO: ACTIVO</p>
+            </div>
+        </section>
+
+        <section id="auditoria-vs-informatica-forense" class="registro-forense">
+            <p class="codigo-sistema">[ SECCI&Oacute;N 08 ]</p>
+            <h2 class="seccion">Auditor&iacute;a vs Inform&aacute;tica Forense</h2>
+            <p class="status-text">ESTADO: DOCUMENTADO</p>
+
+            <p class="registro-texto">
+                Aunque ambas disciplinas revisan sistemas y procesos, la inform&aacute;tica forense
+                se orienta a evidencia digital, trazabilidad y conclusiones periciales.
+            </p>
+
+            <div class="tablero-comparativo">
+
+                <div class="comparativa-header criterio">CRITERIO</div>
+                <div class="comparativa-header">AUDITOR&Iacute;A</div>
+                <div class="comparativa-header">INFORM&Aacute;TICA FORENSE</div>
+
+                <button class="comparativa-criterio active" type="button">Objetivo</button>
+                <div class="comparativa-celda">Evaluar controles, procesos y cumplimiento.</div>
+                <div class="comparativa-celda">Identificar, preservar, analizar y presentar evidencia digital.</div>
+
+                <button class="comparativa-criterio" type="button">Enfoque</button>
+                <div class="comparativa-celda">Preventivo, administrativo y orientado a mejora.</div>
+                <div class="comparativa-celda">Investigativo, t&eacute;cnico y orientado a hechos verificables.</div>
+
+                <button class="comparativa-criterio" type="button">Normativas</button>
+                <div class="comparativa-celda">Pol&iacute;ticas, est&aacute;ndares, controles internos y marcos de cumplimiento.</div>
+                <div class="comparativa-celda">Marco legal, cadena de custodia y metodolog&iacute;as periciales.</div>
+
+                <button class="comparativa-criterio" type="button">Evidencia</button>
+                <div class="comparativa-celda">Registros, controles, reportes y documentaci&oacute;n operativa.</div>
+                <div class="comparativa-celda">Evidencia digital preservada, copia forense y trazabilidad.</div>
+
+                <button class="comparativa-criterio" type="button">Resultado</button>
+                <div class="comparativa-celda">Hallazgos, recomendaciones y oportunidades de mejora.</div>
+                <div class="comparativa-celda">Informe pericial, conclusiones t&eacute;cnicas y soporte probatorio.</div>
+
+            </div>
+        </section>
+
+        <section class="cierre-dossier">
+            <p class="codigo-sistema">[ CIERRE DEL EXPEDIENTE ]</p>
+            <h2 class="seccion">Resumen del Caso</h2>
+
+            <p class="case-summary-text">
+                El dossier presenta los conceptos esenciales de la inform&aacute;tica forense:
+                identificaci&oacute;n, preservaci&oacute;n, an&aacute;lisis y presentaci&oacute;n de
+                evidencia digital. Tambi&eacute;n registra elementos clave como cadena de custodia,
+                copia forense, modelo EDRM, informe pericial, marco legal aplicable y diferencias
+                entre auditor&iacute;a e intervenci&oacute;n pericial.
+            </p>
+
+            <p class="case-summary-text">
+                <span>CONCLUSI&Oacute;N:</span>
+                <br>
+                La inform&aacute;tica forense permite transformar evidencia digital en informaci&oacute;n t&eacute;cnica verificable, preservando su integridad y su valor probatorio.
+            </p>
+
+            <div class="terminal">
+                <div class="dato">
+                    ESTADO DEL DOSSIER
+                    <br>
+                    ARCHIVADO
+                </div>
+            </div>
+        </section>
+
+        <div class="navegacion-expediente volver-archivo-final">
+            <a class="volver-archivo" href="index.html">[ VOLVER AL ARCHIVO ]</a>
+            <a class="volver-archivo volver-menu" href="#menu-dossier">[ VOLVER AL &Iacute;NDICE ]</a>
+        </div>
+
+        <footer>
+            FORSENSIA // REPOSITORIO DE EVIDENCIA DIGITAL // CIB
+        </footer>
+
+    </div>
+
+    <script>
+        const stageButtons = document.querySelectorAll(".stage-button");
+        const stagePanels = document.querySelectorAll(".stage-panel");
+
+        stageButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const selectedStage = button.dataset.stage;
+
+                stageButtons.forEach((item) => item.classList.remove("active"));
+                stagePanels.forEach((panel) => panel.classList.remove("active"));
+
+                button.classList.add("active");
+                document.getElementById(selectedStage).classList.add("active");
+            });
+        });
+
+        const conceptButtons = document.querySelectorAll(".concepto-button");
+        const conceptPanels = document.querySelectorAll(".concepto-panel");
+
+        conceptButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const selectedConcept = button.dataset.concepto;
+
+                conceptButtons.forEach((item) => item.classList.remove("active"));
+                conceptPanels.forEach((panel) => panel.classList.remove("active"));
+
+                button.classList.add("active");
+                document.getElementById(selectedConcept).classList.add("active");
+            });
+        });
+
+        const edrmButtons = document.querySelectorAll(".edrm-button");
+        const edrmPanels = document.querySelectorAll(".edrm-panel");
+
+        edrmButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const selectedStage = button.dataset.edrm;
+
+                edrmButtons.forEach((item) => item.classList.remove("active"));
+                edrmPanels.forEach((panel) => panel.classList.remove("active"));
+
+                button.classList.add("active");
+                document.getElementById(selectedStage).classList.add("active");
+            });
+        });
+
+        const dictamenButtons = document.querySelectorAll(".dictamen-button");
+        const dictamenPanels = document.querySelectorAll(".dictamen-panel");
+
+        dictamenButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const selectedItem = button.dataset.dictamen;
+
+                dictamenButtons.forEach((item) => item.classList.remove("active"));
+                dictamenPanels.forEach((panel) => panel.classList.remove("active"));
+
+                button.classList.add("active");
+                document.getElementById(selectedItem).classList.add("active");
+            });
+        });
+
+        const procedimientoButtons = document.querySelectorAll(".procedimiento-button");
+        const procedimientoPanels = document.querySelectorAll(".procedimiento-panel");
+
+        procedimientoButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const selectedProcedure = button.dataset.procedimiento;
+
+                procedimientoButtons.forEach((item) => item.classList.remove("active"));
+                procedimientoPanels.forEach((panel) => panel.classList.remove("active"));
+
+                button.classList.add("active");
+                document.getElementById(selectedProcedure).classList.add("active");
+            });
+        });
+
+        const comparativaCriterios = document.querySelectorAll(".comparativa-criterio");
+
+        comparativaCriterios.forEach((button) => {
+            button.addEventListener("click", () => {
+                comparativaCriterios.forEach((item) => item.classList.remove("active"));
+                button.classList.add("active");
+            });
+        });
+
+        const legalRecords = {
+            "Ley 26.388": {
+                law: "LEY 26.388",
+                title: "Delitos Informáticos",
+                summary: [
+                    "Incorpora los delitos informáticos al Código Penal Argentino.",
+                    "Regula acceso indebido, fraude informático y daño a sistemas.",
+                    "Protege comunicaciones electrónicas y privacidad digital.",
+                    "Incluye delitos vinculados a menores y material sexual ilícito."
+                ],
+                status: "ESTADO: ACTIVO"
+            },
+            "Ley 25.036": {
+                law: "LEY 25.036",
+                title: "Propiedad Intelectual de Software",
+                summary: [
+                    "Amplía la protección legal a programas de computación.",
+                    "Reconoce derechos de autor sobre software y bases de datos.",
+                    "Regula licencias de uso y copias de resguardo.",
+                    "Establece derechos para empleadores y desarrolladores."
+                ],
+                status: "ESTADO: ACTIVO"
+            },
+            "Ley 25.506": {
+                law: "LEY 25.506",
+                title: "Firma Digital",
+                summary: [
+                    "Reconoce la validez jurídica de la firma digital.",
+                    "Regula certificados digitales y certificadores licenciados.",
+                    "Garantiza autenticidad e integridad documental.",
+                    "Permite sustituir la firma manuscrita en numerosos actos."
+                ],
+                status: "ESTADO: ACTIVO"
+            },
+            "Ley 25.326": {
+                law: "LEY 25.326",
+                title: "Protección de Datos Personales",
+                summary: [
+                    "Protege la privacidad y los datos personales.",
+                    "Define datos sensibles y tratamiento de información.",
+                    "Garantiza derechos de acceso, rectificación y supresión.",
+                    "Exige medidas de seguridad y privacidad desde el diseño."
+                ],
+                status: "ESTADO: ACTIVO"
+            }
+        };
+
+        const legalCards = document.querySelectorAll(".registro-legal");
+        const legalPanel = document.getElementById("legal-dossier-panel");
+        const legalLawNumber = document.getElementById("legal-law-number");
+        const legalTitle = document.getElementById("legal-title");
+        const legalSummary = document.getElementById("legal-summary");
+        const legalStatus = document.getElementById("legal-status");
+
+        legalCards.forEach((card) => {
+            card.addEventListener("click", () => {
+                const lawName = card.querySelector("h3").textContent.trim();
+                const record = legalRecords[lawName];
+
+                if (!record) {
+                    return;
+                }
+
+                legalCards.forEach((item) => item.classList.remove("active"));
+                card.classList.add("active");
+                legalPanel.classList.add("switching");
+
+                setTimeout(() => {
+                    legalLawNumber.textContent = record.law;
+                    legalTitle.textContent = record.title;
+                    legalSummary.innerHTML = record.summary
+                        .map((item) => `<li>${item}</li>`)
+                        .join("");
+                    legalStatus.textContent = record.status;
+                    legalPanel.classList.remove("switching");
+                }, 180);
+            });
+        });
+
+        if (legalCards.length > 0) {
+            legalCards[0].classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,11 +1,52 @@
+html {
+
+    scroll-behavior: smooth;
+
+    scroll-padding-top: 24px;
+
+}
+
 body {
-    background-color: #050505;
+    background:
+        linear-gradient(rgba(0, 255, 136, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(179, 136, 255, 0.025) 1px, transparent 1px),
+        radial-gradient(circle at top left, rgba(0, 255, 136, 0.12), transparent 32rem),
+        #050505;
+
+    background-size: 28px 28px, 28px 28px, auto, auto;
+
     color: #b388ff;
 
     margin: 0;
     padding: 10px 20px 20px 20px;
 
     font-family: 'Space Mono', Consolas, monospace;
+
+    animation: pagina-entrada 0.28s ease both;
+
+    transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+body.salida-pagina {
+
+    opacity: 0;
+
+    transform: translateY(6px);
+
+}
+
+@keyframes pagina-entrada {
+
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
 }
 
 
@@ -183,6 +224,10 @@ a:hover {
 
     text-align: center;
 
+    font-size: 13px;
+
+    line-height: 1.45;
+
     min-width: 180px;
 
 }
@@ -221,7 +266,7 @@ a:hover {
 
     grid-template-columns: repeat(3, 360px);
 
-    align-items: start;
+    align-items: stretch;
 
     justify-content: center;
 
@@ -321,9 +366,11 @@ a:hover {
 
     margin-top: 22px;
 
-    margin-bottom: 22px;
+    margin-bottom: 28px;
 
     flex-wrap: nowrap;
+
+    gap: 14px;
 
 }
 
@@ -331,7 +378,11 @@ a:hover {
 
     font-size: 13px;
 
-    padding: 9px 12px;
+    padding: 9px 18px;
+
+    min-width: auto;
+
+    white-space: nowrap;
 
 }
 
@@ -388,6 +439,467 @@ a:hover {
 
 }
 
+.archivo-intel {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+
+    align-items: stretch;
+
+    gap: 18px;
+
+    margin-top: 18px;
+
+    margin-bottom: 42px;
+
+}
+
+.estado-archivo-panel,
+.mapa-expedientes {
+
+    position: relative;
+
+    box-sizing: border-box;
+
+    height: 100%;
+
+    background-color: #070707;
+
+    border: 0;
+
+    border-left: 2px solid #00ff88;
+
+    border-right: 1px solid rgba(0,255,136,0.22);
+
+    padding: 16px 18px;
+
+    box-shadow:
+        inset 0 0 18px rgba(0,255,136,0.035);
+
+}
+
+.estado-archivo-panel::before,
+.estado-archivo-panel::after,
+.mapa-expedientes::before,
+.mapa-expedientes::after {
+
+    content: "================================================================================================================";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    overflow: hidden;
+
+    color: rgba(0,255,136,0.55);
+
+    font-family: 'Space Mono', Consolas, monospace;
+
+    font-size: 10px;
+
+    line-height: 10px;
+
+    letter-spacing: 0;
+
+    white-space: nowrap;
+
+    pointer-events: none;
+
+}
+
+.estado-archivo-panel::before,
+.mapa-expedientes::before {
+
+    top: -5px;
+
+}
+
+.estado-archivo-panel::after,
+.mapa-expedientes::after {
+
+    bottom: -5px;
+
+}
+
+.intel-panel {
+
+    height: 100%;
+
+    min-height: 0;
+
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.intel-panel.active {
+
+    border-color: rgba(0,255,136,0.4);
+
+    box-shadow:
+        inset 0 0 18px rgba(0,255,136,0.05),
+        0 0 12px rgba(0,255,136,0.08);
+
+}
+
+.intel-toggle {
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    
+
+    padding: 0;
+
+    background: transparent;
+
+    border: 0;
+
+    color: #00ff88;
+
+    font-family: 'Space Mono', Consolas, monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+}
+
+.intel-toggle span:last-child {
+
+    color: #b388ff;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+
+}
+
+.archivo-intel .intel-toggle span:last-child {
+
+    display: none;
+
+}
+
+.mapa-expedientes .intel-toggle {
+
+    display: grid;
+
+    grid-template-columns: 1fr auto;
+
+}
+
+.mapa-expedientes .intel-toggle::after {
+
+    content: "";
+
+    grid-column: 1 / -1;
+
+    display: block;
+
+    height: 1px;
+
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(0,255,136,0.22) 0 7px,
+        transparent 7px 11px
+    );
+
+    background-repeat: repeat-x;
+
+    background-size: auto 1px;
+
+    margin-top: 10px;
+
+    margin-bottom: 0;
+
+    width: 100%;
+
+}
+
+.intel-toggle:hover span {
+
+    color: #00ff88;
+
+    text-shadow: 0 0 8px rgba(0,255,136,0.45);
+
+}
+
+.estado-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 10px;
+
+    margin-top: 10px;
+
+}
+
+.estado-grid div {
+
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(0,255,136,0.22) 0 7px,
+        transparent 7px 11px
+    );
+
+    background-position: top left;
+
+    background-repeat: repeat-x;
+
+    background-size: auto 1px;
+
+    padding-top: 9px;
+
+}
+
+.estado-grid span {
+
+    display: block;
+
+    color: #00ff88;
+
+    font-family: Consolas, 'Courier New', monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 6px;
+
+}
+
+.estado-grid strong {
+
+    color: #b388ff;
+
+    font-family: 'Space Mono', Consolas, monospace;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    font-weight: 400;
+
+}
+
+.mapa-expedientes pre {
+
+    margin: 12px 0 0;
+
+    color: #00ff88;
+
+    font-family: Consolas, 'Courier New', monospace;
+
+    font-size: 12px;
+
+    line-height: 1.55;
+
+    letter-spacing: 1px;
+
+    white-space: pre;
+
+}
+
+@media (max-width: 900px) {
+
+    .archivo-intel {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .estado-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+.vista-selector {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 12px;
+
+    margin-top: 0;
+
+    margin-bottom: 0;
+
+}
+
+.archivo-vista-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+
+}
+
+.archivo-vista-header .seccion {
+
+    margin-top: 0;
+
+    margin-bottom: 0;
+
+    flex: 1;
+
+}
+
+.vista-selector button {
+
+    background-color: #050505;
+
+    border: 1px solid rgba(0,255,136,0.35);
+
+    color: #b388ff;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    padding: 7px 10px;
+
+    cursor: pointer;
+
+}
+
+.vista-selector button:hover,
+.vista-selector button.active {
+
+    color: #00ff88;
+
+    border-color: #00ff88;
+
+    background-color: rgba(0,255,136,0.08);
+
+    box-shadow: 0 0 10px rgba(0,255,136,0.22);
+
+}
+
+.matriz-archivo {
+
+    border-left: 2px solid #00ff88;
+
+    background-color: #070707;
+
+    margin-bottom: 44px;
+
+    box-shadow: inset 0 0 18px rgba(0,255,136,0.035);
+
+}
+
+.matriz-header,
+.matriz-row {
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.25fr 1.35fr 1.35fr 0.85fr 0.75fr;
+
+    gap: 12px;
+
+    align-items: center;
+
+    padding: 11px 14px;
+
+}
+
+.matriz-header {
+
+    color: #00ff88;
+
+    border-top: 1px solid rgba(0,255,136,0.22);
+
+    border-bottom: 1px solid rgba(0,255,136,0.22);
+
+    font-family: Consolas, 'Courier New', monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+.matriz-row {
+
+    color: #b388ff;
+
+    border-bottom: 1px solid rgba(0,255,136,0.12);
+
+    font-family: Consolas, 'Courier New', monospace;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    text-decoration: none;
+
+}
+
+.matriz-row:hover {
+
+    background-color: rgba(0,255,136,0.08);
+
+    color: #00ff88;
+
+}
+
+.matriz-row span:first-child,
+.matriz-row span:last-child {
+
+    color: #00ff88;
+
+}
+
+@media (max-width: 980px) {
+
+    .matriz-archivo {
+
+        overflow-x: auto;
+
+    }
+
+    .matriz-header,
+    .matriz-row {
+
+        min-width: 900px;
+
+    }
+
+    .vista-selector {
+
+        justify-content: flex-start;
+
+        flex-wrap: wrap;
+
+    }
+
+}
+
 
 
 .navegacion {
@@ -440,11 +952,35 @@ a:hover {
 
 .seccion {
 
-    border-bottom: 1px solid #222;
+    position: relative;
+
+    border-bottom: 0;
 
     padding-bottom: 10px;
 
     margin-bottom: 30px;
+
+}
+
+body:not(.pagina-dossier) .seccion::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 1px;
+
+    background-color: rgba(0,255,136,0.26);
+
+    box-shadow:
+        0 0 5px rgba(0,255,136,0.22),
+        0 0 14px rgba(0,255,136,0.12);
 
 }
 
@@ -456,8 +992,24 @@ a:hover {
 
 }
 
+.barra {
 
+    width: 315px;
 
+    height: 9px;
+
+    margin-top: 16px;
+
+    margin-bottom: 12px;
+
+    background:
+        linear-gradient(to right, #00ff88 0 84%, transparent 84% 100%);
+
+    border: 1px solid #00ff88;
+
+    box-shadow: 0 0 10px rgba(0,255,136,0.22);
+
+}
 
 .log {
 
@@ -512,11 +1064,13 @@ a:hover {
 
 footer {
 
+    position: relative;
+
     margin-top: 50px;
 
     padding-top: 30px;
 
-    border-top: 1px solid #222;
+    border-top: 0;
 
     color: #b388ff;
 
@@ -534,6 +1088,28 @@ footer {
 
 }
 
+footer::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    height: 1px;
+
+    background-color: rgba(0,255,136,0.78);
+
+    box-shadow:
+        0 0 6px rgba(0,255,136,0.75),
+        0 0 14px rgba(0,255,136,0.35);
+
+}
+
 .codigo-sistema {
 
     color: #00ff88;
@@ -543,6 +1119,12 @@ footer {
     letter-spacing: 2px;
 
     margin-top: -10px;
+
+}
+
+.codigo-sistema.archivo-disponibles {
+
+    color: #b388ff;
 
 }
 
@@ -2433,6 +3015,31 @@ h1 {
 
 }
 
+body:not(.pagina-dossier) .dossier h2 {
+
+    position: relative;
+
+    display: inline-block;
+
+    border: 3px double rgba(0,255,136,0.68);
+
+    background-color: transparent;
+
+    box-shadow: none;
+
+    padding: 10px 18px 12px;
+
+    overflow: visible;
+
+}
+
+body:not(.pagina-dossier) .dossier h2::before,
+body:not(.pagina-dossier) .dossier h2::after {
+
+    content: none;
+
+}
+
 .dossier:hover {
 
     border-color: #00ff88;
@@ -2448,7 +3055,17 @@ h1 {
 
 .separador {
 
-    border-bottom: 1px solid rgba(0, 255, 136, 0.15);
+    height: 1px;
+
+    border-bottom: 0;
+
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(0,255,136,0.18) 0 8px,
+        transparent 8px 12px
+    );
+
+    background-repeat: repeat-x;
 
     margin-top: 15px;
 
@@ -2537,13 +3154,6 @@ h1 {
 
 }
 
-html {
-
-    scroll-behavior: smooth;
-
-}
-
-
 .system-log {
 
     margin-top: 30px;
@@ -2596,4 +3206,490 @@ html {
 
     transform-origin: top right;
 
+}
+
+/* Responsive Home - capa final para la version React */
+@media (max-width: 1180px) {
+
+    body:not(.pagina-dossier) {
+        overflow-x: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    body:not(.pagina-dossier) .contenedor-principal {
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    body:not(.pagina-dossier) .panel-principal {
+        gap: 30px;
+    }
+
+    body:not(.pagina-dossier) .arte-lateral img {
+        max-width: 320px;
+        transform: scale(1.02);
+    }
+
+    body:not(.pagina-dossier) .grid-derecho {
+        grid-template-columns: repeat(2, minmax(300px, 360px));
+        gap: 28px;
+    }
+
+    body:not(.pagina-dossier) .grid-derecho .dossier {
+        width: 100%;
+    }
+
+    body:not(.pagina-dossier) .matriz-archivo {
+        overflow-x: auto;
+    }
+
+    body:not(.pagina-dossier) .matriz-header,
+    body:not(.pagina-dossier) .matriz-row {
+        min-width: 900px;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    body:not(.pagina-dossier) .titulo-forensia {
+        font-size: 38px;
+        letter-spacing: 8px;
+    }
+
+    body:not(.pagina-dossier) .ficha-sistema {
+        flex-wrap: wrap;
+        gap: 8px 18px;
+    }
+
+    body:not(.pagina-dossier) .panel-principal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    body:not(.pagina-dossier) .arte-lateral {
+        align-self: center;
+        margin-top: 0;
+    }
+
+    body:not(.pagina-dossier) .arte-lateral img {
+        max-width: min(320px, 80vw);
+        transform: none;
+        transform-origin: center;
+    }
+
+    body:not(.pagina-dossier) .archivo-busqueda {
+        align-items: stretch;
+    }
+
+    body:not(.pagina-dossier) .archivo-intel {
+        grid-template-columns: 1fr;
+        align-items: start;
+        gap: 14px;
+        margin-bottom: 34px;
+    }
+
+    body:not(.pagina-dossier) .estado-archivo-panel,
+    body:not(.pagina-dossier) .mapa-expedientes,
+    body:not(.pagina-dossier) .intel-panel {
+        height: auto;
+    }
+
+    body:not(.pagina-dossier) .archivo-intel .intel-toggle span:last-child {
+        display: inline;
+    }
+
+    body:not(.pagina-dossier) .estado-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    body:not(.pagina-dossier) .archivo-vista-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    body:not(.pagina-dossier) .vista-selector {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    body:not(.pagina-dossier) .grid-derecho {
+        grid-template-columns: minmax(0, 1fr);
+        justify-content: stretch;
+    }
+
+    body:not(.pagina-dossier) .grid-derecho .dossier {
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 330px;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 640px) {
+
+    body:not(.pagina-dossier) {
+        padding: 8px 10px 18px;
+    }
+
+    body:not(.pagina-dossier) .contenedor-principal {
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    body:not(.pagina-dossier) .titulo-forensia {
+        font-size: 28px;
+        letter-spacing: 5px;
+    }
+
+    body:not(.pagina-dossier) .sistema {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    body:not(.pagina-dossier) .fuente-documental {
+        font-size: 11px;
+        line-height: 1.55;
+        letter-spacing: 1.4px;
+    }
+
+    body:not(.pagina-dossier) .barra {
+        width: min(315px, 100%);
+    }
+
+    body:not(.pagina-dossier) .modulos-filtros {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    body:not(.pagina-dossier) .modulos-filtros .archivo-filtro {
+        flex: 1 1 100%;
+        text-align: center;
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    body:not(.pagina-dossier) .archivo-busqueda {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    body:not(.pagina-dossier) .archivo-busqueda input {
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    body:not(.pagina-dossier) .archivo-vista-header {
+        display: none;
+    }
+
+    body:not(.pagina-dossier) .intel-toggle {
+        align-items: flex-start;
+        flex-direction: column;
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    body:not(.pagina-dossier) .estado-grid {
+        grid-template-columns: 1fr;
+    }
+
+    body:not(.pagina-dossier) .mapa-expedientes pre {
+        overflow-x: auto;
+        font-size: 11px;
+    }
+
+    body:not(.pagina-dossier) .seccion {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    body:not(.pagina-dossier) .contador {
+        display: block;
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    body:not(.pagina-dossier) .dossier {
+        padding: 18px;
+        padding-top: 34px;
+        min-height: 310px;
+    }
+
+    body:not(.pagina-dossier) .dossier h2 {
+        font-size: 24px;
+    }
+
+    body:not(.pagina-dossier) .dossier p:last-child {
+        white-space: normal;
+        font-size: 12px;
+    }
+
+    body:not(.pagina-dossier) .metadata {
+        font-size: 10px;
+        letter-spacing: 1.7px;
+    }
+
+    body:not(.pagina-dossier) .vista-selector button {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    body:not(.pagina-dossier) footer {
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+}
+
+/* Responsive Home refinado: imagen escalable y carril de expedientes */
+.dossier-carousel {
+    position: relative;
+}
+
+.dossier-carousel-control {
+    display: none;
+}
+
+@media (max-width: 1180px) {
+
+    body:not(.pagina-dossier) .panel-principal {
+        display: grid;
+        grid-template-columns: minmax(0, 1.15fr) clamp(180px, 30vw, 320px);
+        align-items: start;
+    }
+
+    body:not(.pagina-dossier) .arte-lateral {
+        align-self: start;
+        margin-top: 0;
+    }
+
+    body:not(.pagina-dossier) .arte-lateral img {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        transform: none;
+    }
+
+    body:not(.pagina-dossier) .dossier-carousel {
+        display: grid;
+        grid-template-columns: 34px minmax(0, 1fr) 34px;
+        align-items: center;
+        gap: 10px;
+    }
+
+    body:not(.pagina-dossier) .dossier-track {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        gap: 22px;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+        padding-bottom: 2px;
+    }
+
+    body:not(.pagina-dossier) .dossier-track::-webkit-scrollbar {
+        display: none;
+    }
+
+    body:not(.pagina-dossier) .dossier-track a {
+        flex: 0 0 calc((100% - 22px) / 2);
+        min-width: 0;
+        scroll-snap-align: start;
+    }
+
+    body:not(.pagina-dossier) .dossier-track .dossier {
+        width: 100%;
+        max-width: none;
+        margin-left: 0;
+        margin-right: 0;
+        height: 330px;
+        min-height: 330px;
+    }
+
+    body:not(.pagina-dossier) .dossier-carousel-control {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        min-height: 72px;
+        background-color: #050505;
+        border: 1px solid rgba(0,255,136,0.35);
+        color: #b388ff;
+        cursor: pointer;
+        font-family: 'Space Mono', Consolas, monospace;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+    body:not(.pagina-dossier) .dossier-carousel-control:hover {
+        color: #00ff88;
+        border-color: #00ff88;
+        background-color: rgba(0,255,136,0.08);
+        box-shadow: 0 0 10px rgba(0,255,136,0.22);
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    body:not(.pagina-dossier) .panel-principal {
+        grid-template-columns: minmax(0, 1fr) clamp(145px, 28vw, 230px);
+        gap: 18px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    body:not(.pagina-dossier) .panel-principal {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    body:not(.pagina-dossier) .arte-lateral {
+        display: none;
+    }
+
+    body:not(.pagina-dossier) .dossier-track a {
+        flex-basis: 100%;
+    }
+
+}
+
+/* Microinteracciones e iconografia terminal para expedientes */
+.pagina-dossier .concepto-button,
+.pagina-dossier .stage-button,
+.pagina-dossier .edrm-button,
+.pagina-dossier .dictamen-button,
+.pagina-dossier .procedimiento-button,
+.pagina-dossier .registro-legal {
+    position: relative;
+}
+
+.pagina-dossier .concepto-button,
+.pagina-dossier .stage-button,
+.pagina-dossier .dictamen-button,
+.pagina-dossier .procedimiento-button {
+    overflow: hidden;
+}
+
+.pagina-dossier .concepto-button::before,
+.pagina-dossier .stage-button::before,
+.pagina-dossier .dictamen-button::before,
+.pagina-dossier .procedimiento-button::before {
+    content: ">";
+    color: #00ff88;
+    margin-right: 8px;
+    opacity: 0;
+    transition: opacity 0.18s ease, text-shadow 0.18s ease;
+}
+
+.pagina-dossier .concepto-button::after,
+.pagina-dossier .stage-button::after,
+.pagina-dossier .dictamen-button::after,
+.pagina-dossier .procedimiento-button::after,
+.pagina-dossier .registro-legal::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0,255,136,0.055),
+        transparent
+    );
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-60%);
+    transition: opacity 0.18s ease, transform 0.32s ease;
+}
+
+.pagina-dossier .concepto-button:hover::before,
+.pagina-dossier .concepto-button.active::before,
+.pagina-dossier .stage-button:hover::before,
+.pagina-dossier .stage-button.active::before,
+.pagina-dossier .dictamen-button:hover::before,
+.pagina-dossier .dictamen-button.active::before,
+.pagina-dossier .procedimiento-button:hover::before,
+.pagina-dossier .procedimiento-button.active::before {
+    opacity: 1;
+    text-shadow: 0 0 6px rgba(0,255,136,0.65);
+}
+
+.pagina-dossier .concepto-button:hover::after,
+.pagina-dossier .concepto-button.active::after,
+.pagina-dossier .stage-button:hover::after,
+.pagina-dossier .stage-button.active::after,
+.pagina-dossier .dictamen-button:hover::after,
+.pagina-dossier .dictamen-button.active::after,
+.pagina-dossier .procedimiento-button:hover::after,
+.pagina-dossier .procedimiento-button.active::after,
+.pagina-dossier .registro-legal:hover::after,
+.pagina-dossier .registro-legal.active::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.pagina-dossier .concepto-button:hover,
+.pagina-dossier .concepto-button.active,
+.pagina-dossier .stage-button:hover,
+.pagina-dossier .stage-button.active,
+.pagina-dossier .edrm-button:hover,
+.pagina-dossier .edrm-button.active,
+.pagina-dossier .dictamen-button:hover,
+.pagina-dossier .dictamen-button.active,
+.pagina-dossier .procedimiento-button:hover,
+.pagina-dossier .procedimiento-button.active,
+.pagina-dossier .registro-legal:hover,
+.pagina-dossier .registro-legal.active {
+    text-shadow:
+        0 0 6px rgba(0,255,136,0.5),
+        0 0 10px rgba(179,136,255,0.2);
+}
+
+.pagina-dossier .edrm-button:hover,
+.pagina-dossier .edrm-button.active {
+    transform: translateY(-1px);
+}
+
+.pagina-dossier .edrm-button:hover::after,
+.pagina-dossier .edrm-button.active::after {
+    opacity: 1;
+    text-shadow: 0 0 6px rgba(0,255,136,0.65);
+}
+
+.pagina-dossier .seccion::before {
+    color: #b388ff;
+    font-size: 0.58em;
+    letter-spacing: 2px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.pagina-forense .seccion::before {
+    content: "[FOR]";
+}
+
+.pagina-leg .seccion::before {
+    content: "[LEG]";
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pagina-dossier .concepto-button::after,
+    .pagina-dossier .stage-button::after,
+    .pagina-dossier .dictamen-button::after,
+    .pagina-dossier .procedimiento-button::after,
+    .pagina-dossier .registro-legal::after,
+    .pagina-dossier .edrm-button {
+        transition: none;
+    }
 }

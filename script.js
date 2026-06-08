@@ -19,6 +19,77 @@ setInterval(actualizarHora, 1000);
 
 actualizarHora();
 
+const movimientoReducido = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+function desplazarSuave(destino) {
+    const posicionInicial = window.pageYOffset;
+    const posicionDestino = destino.getBoundingClientRect().top + posicionInicial - 24;
+    const distancia = posicionDestino - posicionInicial;
+    const duracion = Math.min(900, Math.max(450, Math.abs(distancia) * 0.45));
+    let inicio = null;
+
+    function suavizar(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+    }
+
+    function animarScroll(tiempoActual) {
+        if (!inicio) {
+            inicio = tiempoActual;
+        }
+
+        const progreso = Math.min((tiempoActual - inicio) / duracion, 1);
+        const avance = suavizar(progreso);
+
+        window.scrollTo(0, posicionInicial + distancia * avance);
+
+        if (progreso < 1) {
+            window.requestAnimationFrame(animarScroll);
+        }
+    }
+
+    window.requestAnimationFrame(animarScroll);
+}
+
+document.querySelectorAll('a[href^="#"]').forEach((enlace) => {
+    enlace.addEventListener("click", (evento) => {
+        const idDestino = enlace.getAttribute("href");
+
+        if (!idDestino || idDestino === "#") {
+            return;
+        }
+
+        const destino = document.querySelector(idDestino);
+
+        if (!destino) {
+            return;
+        }
+
+        evento.preventDefault();
+
+        desplazarSuave(destino);
+
+        history.pushState(null, "", idDestino);
+    });
+});
+
+document.querySelectorAll('a[href$=".html"]').forEach((enlace) => {
+    enlace.addEventListener("click", (evento) => {
+        const botonPrincipal = evento.button === 0;
+        const modificador = evento.metaKey || evento.ctrlKey || evento.shiftKey || evento.altKey;
+
+        if (!botonPrincipal || modificador || enlace.target === "_blank" || movimientoReducido) {
+            return;
+        }
+
+        evento.preventDefault();
+        document.body.classList.add("salida-pagina");
+
+        window.setTimeout(() => {
+            window.location.href = enlace.href;
+        }, 180);
+    });
+});
+
 const buscadorExpedientes = document.getElementById("buscador-expedientes");
 const filtrosExpedientes = document.querySelectorAll(".archivo-filtro");
 const tarjetasExpedientes = document.querySelectorAll("[data-categoria][data-busqueda]");
@@ -85,10 +156,7 @@ filtrosExpedientes.forEach((boton) => {
         const destino = filtroActivo === "forense" ? seccionesExpedientes.forense : seccionesExpedientes.derecho;
 
         if (destino) {
-            destino.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+            desplazarSuave(destino);
         }
     });
 });

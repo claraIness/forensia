@@ -3033,6 +3033,120 @@ body:not(.pagina-dossier) .dossier h2 {
 
 }
 
+body:not(.pagina-dossier) .dossier {
+    border: 1px solid rgba(0,255,136,0.72);
+    clip-path: polygon(
+        7% 0,
+        100% 0,
+        100% 74%,
+        93% 100%,
+        0 100%,
+        0 10%
+    );
+    overflow: visible;
+    box-shadow:
+        0 0 12px rgba(0,255,136,0.16),
+        inset 0 0 22px rgba(0,255,136,0.035);
+}
+
+body:not(.pagina-dossier) .dossier::before {
+    top: 14px;
+    left: 18px;
+    width: 68px;
+    height: 2px;
+    background: #00ff88;
+    box-shadow: 0 0 8px rgba(0,255,136,0.65);
+}
+
+body:not(.pagina-dossier) .dossier::after {
+    content: "";
+    position: absolute;
+    top: 72px;
+    right: -12px;
+    left: auto;
+    width: 10px;
+    height: 92px;
+    background:
+        repeating-linear-gradient(
+            180deg,
+            rgba(0,255,136,0.72) 0 10px,
+            transparent 10px 18px
+        );
+    opacity: 0.75;
+    transform: none;
+    transition: opacity 0.25s ease, box-shadow 0.25s ease;
+}
+
+body:not(.pagina-dossier) .dossier:hover {
+    border-color: #00ff88;
+    color: #00ff88;
+    box-shadow:
+        0 0 14px rgba(0,255,136,0.28),
+        0 0 28px rgba(0,255,136,0.1),
+        inset 0 0 24px rgba(0,255,136,0.05);
+}
+
+body:not(.pagina-dossier) .dossier:hover h2,
+body:not(.pagina-dossier) .dossier:hover p,
+body:not(.pagina-dossier) .dossier:hover .metadata,
+body:not(.pagina-dossier) .dossier:hover .categoria,
+body:not(.pagina-dossier) .dossier:hover .etiqueta {
+    color: #00ff88;
+    text-shadow:
+        0 0 6px rgba(0,255,136,0.45),
+        0 0 10px rgba(0,255,136,0.18);
+}
+
+body:not(.pagina-dossier) .dossier:hover .led {
+    box-shadow:
+        0 0 8px #00ff88,
+        0 0 16px rgba(0,255,136,0.75);
+}
+
+body:not(.pagina-dossier) .dossier:hover::after {
+    opacity: 1;
+    box-shadow: 0 0 12px rgba(0,255,136,0.42);
+}
+
+body:not(.pagina-dossier) .dossier a,
+body:not(.pagina-dossier) .dossier > * {
+    position: relative;
+    z-index: 1;
+}
+
+body:not(.pagina-dossier) .dossier .separador {
+    position: relative;
+    z-index: 1;
+}
+
+body:not(.pagina-dossier) .dossier:hover .separador {
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(0,255,136,0.35) 0 8px,
+        transparent 8px 12px
+    );
+}
+
+body:not(.pagina-dossier) .dossier {
+    background-image:
+        linear-gradient(
+            110deg,
+            transparent 0 35%,
+            rgba(0,255,136,0.09) 45%,
+            transparent 55% 100%
+        );
+    background-position: -180% 0;
+    background-repeat: no-repeat;
+    background-size: 220% 100%;
+}
+
+body:not(.pagina-dossier) .dossier:hover {
+    background-position: 180% 0;
+    transition:
+        all 0.3s ease,
+        background-position 0.55s ease;
+}
+
 body:not(.pagina-dossier) .dossier h2::before,
 body:not(.pagina-dossier) .dossier h2::after {
 

@@ -303,7 +303,7 @@ function DossierCard({ dossier }) {
     <a href={dossier.href} target="_blank" rel="noopener noreferrer">
       <div className="dossier">
         <svg className="dossier-frame" viewBox="0 0 450 330" preserveAspectRatio="none" aria-hidden="true">
-          <path d="M42 1 H415 L449 35 V191 L425 214 V292 L396 329 H51 L1 294 V38 Z" />
+          <path d="M51 1 H396 L425 38 V116 L449 139 V295 L415 329 H42 L1 294 V36 Z" />
         </svg>
         <p className="badge-activo">EXPEDIENTE ACTIVO</p>
 

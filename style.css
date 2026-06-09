@@ -3034,56 +3034,60 @@ body:not(.pagina-dossier) .dossier h2 {
 }
 
 body:not(.pagina-dossier) .dossier {
-    border: 1px solid rgba(0,255,136,0.72);
-    clip-path: polygon(
-        7% 0,
-        100% 0,
-        100% 74%,
-        93% 100%,
-        0 100%,
-        0 10%
-    );
+    border: 0;
+    background-color: transparent;
+    clip-path: none;
     overflow: visible;
-    box-shadow:
-        0 0 12px rgba(0,255,136,0.16),
-        inset 0 0 22px rgba(0,255,136,0.035);
+    box-shadow: none;
 }
 
 body:not(.pagina-dossier) .dossier::before {
-    top: 14px;
-    left: 18px;
-    width: 68px;
-    height: 2px;
-    background: #00ff88;
-    box-shadow: 0 0 8px rgba(0,255,136,0.65);
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: auto;
+    height: auto;
+    background: rgba(3, 5, 4, 0.98);
+    clip-path: polygon(
+        9.3% 0.3%,
+        92.2% 0.3%,
+        99.8% 10.6%,
+        99.8% 57.9%,
+        94.4% 64.8%,
+        94.4% 88.5%,
+        88% 99.7%,
+        11.3% 99.7%,
+        0.2% 89.1%,
+        0.2% 11.5%
+    );
+    box-shadow: inset 0 0 11px rgba(0,255,136,0.018);
+    pointer-events: none;
+    z-index: 0;
 }
 
 body:not(.pagina-dossier) .dossier::after {
-    content: "";
+    content: none;
     position: absolute;
-    top: 72px;
-    right: -12px;
+    top: 58px;
+    right: 14px;
     left: auto;
-    width: 10px;
-    height: 92px;
+    width: 18px;
+    height: 76px;
     background:
         repeating-linear-gradient(
-            180deg,
-            rgba(0,255,136,0.72) 0 10px,
-            transparent 10px 18px
+            45deg,
+            rgba(0,255,136,0.36) 0 7px,
+            transparent 7px 13px
         );
-    opacity: 0.75;
+    opacity: 0.5;
+    clip-path: polygon(0 0, 100% 14%, 100% 100%, 0 86%);
     transform: none;
     transition: opacity 0.25s ease, box-shadow 0.25s ease;
 }
 
 body:not(.pagina-dossier) .dossier:hover {
-    border-color: #00ff88;
     color: #00ff88;
-    box-shadow:
-        0 0 14px rgba(0,255,136,0.28),
-        0 0 28px rgba(0,255,136,0.1),
-        inset 0 0 24px rgba(0,255,136,0.05);
+    box-shadow: none;
 }
 
 body:not(.pagina-dossier) .dossier:hover h2,
@@ -3093,19 +3097,19 @@ body:not(.pagina-dossier) .dossier:hover .categoria,
 body:not(.pagina-dossier) .dossier:hover .etiqueta {
     color: #00ff88;
     text-shadow:
-        0 0 6px rgba(0,255,136,0.45),
-        0 0 10px rgba(0,255,136,0.18);
+        0 0 3px rgba(0,255,136,0.23),
+        0 0 5px rgba(0,255,136,0.09);
 }
 
 body:not(.pagina-dossier) .dossier:hover .led {
     box-shadow:
-        0 0 8px #00ff88,
-        0 0 16px rgba(0,255,136,0.75);
+        0 0 4px rgba(0,255,136,0.85),
+        0 0 8px rgba(0,255,136,0.38);
 }
 
 body:not(.pagina-dossier) .dossier:hover::after {
-    opacity: 1;
-    box-shadow: 0 0 12px rgba(0,255,136,0.42);
+    opacity: 0;
+    box-shadow: none;
 }
 
 body:not(.pagina-dossier) .dossier a,
@@ -3114,9 +3118,43 @@ body:not(.pagina-dossier) .dossier > * {
     z-index: 1;
 }
 
+body:not(.pagina-dossier) .dossier-frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    overflow: visible;
+    pointer-events: none;
+    z-index: 2;
+}
+
+body:not(.pagina-dossier) .dossier-frame path {
+    fill: none;
+    stroke: rgba(179,136,255,0.88);
+    stroke-width: 1.8;
+    vector-effect: non-scaling-stroke;
+    transition: filter 0.25s ease, stroke 0.25s ease;
+}
+
+body:not(.pagina-dossier) .dossier:hover .dossier-frame path {
+    stroke: rgba(179,136,255,0.95);
+    filter:
+        drop-shadow(0 0 4px rgba(0,255,136,0.55))
+        drop-shadow(0 0 10px rgba(0,255,136,0.28));
+}
+
+body:not(.pagina-dossier) .dossier:hover::before {
+    box-shadow:
+        inset 0 0 14px rgba(0,255,136,0.045),
+        0 0 10px rgba(0,255,136,0.12);
+}
+
 body:not(.pagina-dossier) .dossier .separador {
     position: relative;
     z-index: 1;
+    width: calc(100% - 58px);
+    margin-right: auto;
 }
 
 body:not(.pagina-dossier) .dossier:hover .separador {
@@ -3128,23 +3166,17 @@ body:not(.pagina-dossier) .dossier:hover .separador {
 }
 
 body:not(.pagina-dossier) .dossier {
-    background-image:
-        linear-gradient(
-            110deg,
-            transparent 0 35%,
-            rgba(0,255,136,0.09) 45%,
-            transparent 55% 100%
-        );
-    background-position: -180% 0;
+    background-image: none;
+    background-position: center;
     background-repeat: no-repeat;
-    background-size: 220% 100%;
+    background-size: auto;
 }
 
 body:not(.pagina-dossier) .dossier:hover {
-    background-position: 180% 0;
+    background-position: center;
     transition:
-        all 0.3s ease,
-        background-position 0.55s ease;
+        all 0.3s ease;
+    box-shadow: none;
 }
 
 body:not(.pagina-dossier) .dossier h2::before,
@@ -3154,13 +3186,17 @@ body:not(.pagina-dossier) .dossier h2::after {
 
 }
 
+body:not(.pagina-dossier) .dossier:hover {
+    box-shadow: none;
+}
+
 .dossier:hover {
 
     border-color: #00ff88;
 
     box-shadow:
-        0 0 10px rgba(0,255,136,0.3),
-        0 0 20px rgba(0,255,136,0.1);
+        0 0 5px rgba(0,255,136,0.15),
+        0 0 10px rgba(0,255,136,0.05);
 
     transform: translateY(-3px);
 
@@ -3217,7 +3253,7 @@ body:not(.pagina-dossier) .dossier h2::after {
 
     margin-right: 8px;
 
-    box-shadow: 0 0 8px #00ff88;
+    box-shadow: 0 0 4px rgba(0,255,136,0.65);
 
 }
 

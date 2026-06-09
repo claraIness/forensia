@@ -3138,10 +3138,10 @@ body:not(.pagina-dossier) .dossier-frame path {
 }
 
 body:not(.pagina-dossier) .dossier:hover .dossier-frame path {
-    stroke: rgba(179,136,255,0.95);
+    stroke: rgba(0,255,136,0.92);
     filter:
-        drop-shadow(0 0 4px rgba(0,255,136,0.55))
-        drop-shadow(0 0 10px rgba(0,255,136,0.28));
+        drop-shadow(0 0 4px rgba(0,255,136,0.5))
+        drop-shadow(0 0 10px rgba(0,255,136,0.24));
 }
 
 body:not(.pagina-dossier) .dossier:hover::before {

@@ -198,11 +198,9 @@ function SearchPanel({ query, onQueryChange, visibleCount }) {
   )
 }
 
-function ArchiveIntel({ allDossiers, visibleDossiers }) {
+function ArchiveIntel() {
   const [openPanel, setOpenPanel] = useState(null)
   const [isCompactView, setIsCompactView] = useState(false)
-  const derechoCount = allDossiers.filter((dossier) => dossier.type === 'derecho').length
-  const forenseCount = allDossiers.filter((dossier) => dossier.type === 'forense').length
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 900px)')
@@ -237,37 +235,39 @@ function ArchiveIntel({ allDossiers, visibleDossiers }) {
           onClick={() => togglePanel('estado')}
           aria-expanded={estadoOpen}
         >
-          <span>[ ESTADO DEL ARCHIVO ]</span>
+          <span className="tool-panel-heading">
+            <span>[ FOR-TOOL-001 ]</span>
+            <small>GENERADOR DE CADENA DE CUSTODIA</small>
+          </span>
           <span>{isCompactView ? (estadoOpen ? '[ CERRAR ]' : '[ ABRIR ]') : '[ ABIERTO ]'}</span>
         </button>
 
         {estadoOpen && (
-          <div className="estado-grid">
-            <div>
-              <span>EXPEDIENTES INDEXADOS</span>
-              <strong>{allDossiers.length}</strong>
+          <a
+            className="for-tool-preview"
+            href="https://for-tool-001.streamlit.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Abrir FOR-TOOL-001, generador de cadena de custodia"
+          >
+            <div className="tool-preview-summary">
+              <span>[ DOSSIER DE EVIDENCIA ]</span>
+              <span>ESTADO: VERIFICADO</span>
+              <span>CLASIFICACION: EVIDENCIA DIGITAL</span>
+              <span>ALGORITMO: SHA256</span>
             </div>
-            <div>
-              <span>RESULTADOS ACTIVOS</span>
-              <strong>{visibleDossiers.length}</strong>
+
+            <div className="tool-preview-record">
+              <span>[ IDENTIFICACION ]</span>
+              <dl>
+                <div><dt>EXPEDIENTE</dt><dd>EV-2026-003</dd></div>
+                <div><dt>RESPONSABLE</dt><dd>USUARIO AUTENTICADO</dd></div>
+                <div><dt>ESTADO</dt><dd>RECIBIDO</dd></div>
+              </dl>
             </div>
-            <div>
-              <span>DERECHO DIGITAL</span>
-              <strong>{derechoCount}</strong>
-            </div>
-            <div>
-              <span>INFORMÁTICA FORENSE</span>
-              <strong>{forenseCount}</strong>
-            </div>
-            <div>
-              <span>ESTADO</span>
-              <strong>SINCRONIZADO</strong>
-            </div>
-            <div>
-              <span>INTEGRIDAD</span>
-              <strong>VERIFICADA</strong>
-            </div>
-          </div>
+
+            <span className="tool-preview-action">[ ABRIR HERRAMIENTA ]</span>
+          </a>
         )}
       </div>
 
@@ -519,7 +519,7 @@ function App() {
           visibleCount={visibleDossiers.length}
         />
 
-        <ArchiveIntel allDossiers={dossiers} visibleDossiers={visibleDossiers} />
+        <ArchiveIntel />
 
         <div className="archivo-vista-header">
           {viewMode === 'tarjetas' ? (

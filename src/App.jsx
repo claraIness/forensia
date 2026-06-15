@@ -305,9 +305,17 @@ function DossierCard({ dossier }) {
         <svg className="dossier-frame" viewBox="0 0 450 330" preserveAspectRatio="none" aria-hidden="true">
           <path d="M51 1 H396 L425 38 V116 L449 139 V295 L415 329 H42 L1 294 V36 Z" />
         </svg>
-        <p className="badge-activo">EXPEDIENTE ACTIVO</p>
+        <div className="dossier-status">
+          <p className="badge-activo">EXPEDIENTE ACTIVO</p>
+          <span className="dossier-blocks" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i>
+          </span>
+        </div>
 
-        <h2>{dossier.code}</h2>
+        <div className="dossier-title-row">
+          <h2>{dossier.code}</h2>
+          <span className="dossier-register">REG // {dossier.type.toUpperCase()}</span>
+        </div>
 
         <p className="metadata">
           <span className="led"></span>
@@ -316,16 +324,22 @@ function DossierCard({ dossier }) {
 
         <div className="separador"></div>
 
-        <p className="categoria">{dossier.category}</p>
+        <p className="categoria">
+          <span>[ AREA ]</span>
+          {dossier.category}
+        </p>
 
         <div className="separador"></div>
 
-        <p>{dossier.title}</p>
+        <p className="dossier-name">{dossier.title}</p>
 
         <div className="separador"></div>
 
-        <p>
-          <span className="etiqueta">CLASIFICACIÓN:</span> {dossier.classification}
+        <p className="dossier-classification">
+          <span>
+            <span className="etiqueta">CLASIFICACIÓN:</span> {dossier.classification}
+          </span>
+          <span className="dossier-access">[ ABRIR ]</span>
         </p>
       </div>
     </a>

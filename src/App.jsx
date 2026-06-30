@@ -236,8 +236,8 @@ function ArchiveIntel() {
           aria-expanded={estadoOpen}
         >
           <span className="tool-panel-heading">
-            <span>[ FOR-TOOL-001 ]</span>
-            <small>GENERADOR DE CADENA DE CUSTODIA</small>
+            <span>[ PROYECTOS ]</span>
+            <small>DESARROLLOS FORENSIA</small>
           </span>
           <span>{isCompactView ? (estadoOpen ? '[ CERRAR ]' : '[ ABRIR ]') : '[ ABIERTO ]'}</span>
         </button>
@@ -248,25 +248,25 @@ function ArchiveIntel() {
             href="https://for-tool-001.streamlit.app/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Abrir FOR-TOOL-001, generador de cadena de custodia"
+            aria-label="Abrir proyecto FOR-TOOL-001, Generador de Informes de Evidencia"
           >
             <div className="tool-preview-summary">
-              <span>[ DOSSIER DE EVIDENCIA ]</span>
-              <span>ESTADO: VERIFICADO</span>
-              <span>CLASIFICACION: EVIDENCIA DIGITAL</span>
-              <span>ALGORITMO: SHA256</span>
+              <span>[ FOR-TOOL-001 ]</span>
+              <span>GENERADOR DE INFORMES DE EVIDENCIA</span>
+              <span>ESTADO: ACTIVO</span>
+              <span>VERSION: 1.0</span>
             </div>
 
             <div className="tool-preview-record">
-              <span>[ IDENTIFICACION ]</span>
+              <span>[ DESCRIPCION ]</span>
               <dl>
-                <div><dt>EXPEDIENTE</dt><dd>EV-2026-003</dd></div>
-                <div><dt>RESPONSABLE</dt><dd>USUARIO AUTENTICADO</dd></div>
-                <div><dt>ESTADO</dt><dd>RECIBIDO</dd></div>
+                <div><dt>INFORMES</dt><dd>GENERACION</dd></div>
+                <div><dt>CUSTODIA</dt><dd>CADENA DE EVIDENCIA</dd></div>
+                <div><dt>GESTION</dt><dd>EVIDENCIA DIGITAL</dd></div>
               </dl>
             </div>
 
-            <span className="tool-preview-action">[ ABRIR HERRAMIENTA ]</span>
+            <span className="tool-preview-action">[ ABRIR PROYECTO ]</span>
           </a>
         )}
       </div>

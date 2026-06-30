@@ -2041,33 +2041,25 @@ h1 {
 }
 
 .acerca-panel::before {
-    color: rgba(0,255,136,0.55);
-    content: "================================================================================================================";
-    font-family: 'Space Mono', Consolas, monospace;
-    font-size: 10px;
+    background-image: repeating-linear-gradient(90deg, rgba(0,255,136,0.62) 0 5px, transparent 5px 7px);
+    content: "";
+    height: 1px;
     left: 0;
-    line-height: 10px;
-    overflow: hidden;
     pointer-events: none;
     position: absolute;
     right: 0;
-    top: -5px;
-    white-space: nowrap;
+    top: 0;
 }
 
 .acerca-panel::after {
-    bottom: -5px;
-    color: rgba(0,255,136,0.55);
-    content: "================================================================================================================";
-    font-family: 'Space Mono', Consolas, monospace;
-    font-size: 10px;
+    background-image: repeating-linear-gradient(90deg, rgba(0,255,136,0.62) 0 5px, transparent 5px 7px);
+    bottom: 0;
+    content: "";
+    height: 1px;
     left: 0;
-    line-height: 10px;
-    overflow: hidden;
     pointer-events: none;
     position: absolute;
     right: 0;
-    white-space: nowrap;
 }
 
 .acerca-panel:hover {
@@ -2083,7 +2075,7 @@ h1 {
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 3px;
-    margin: 8px 0 18px;
+    margin: 0 0 18px;
     padding-bottom: 12px;
     position: relative;
 }
@@ -2108,7 +2100,7 @@ h1 {
     color: #00ff88;
     font-size: 11px;
     line-height: 1.6;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
     padding-left: 17px;
     position: relative;
 }
@@ -2131,6 +2123,7 @@ h1 {
     color: #00ff88;
     font-size: 11px;
     letter-spacing: 2px;
+    font-weight: 400;
 }
 
 .acerca-aviso strong::after {
@@ -2155,7 +2148,8 @@ h1 {
     display: grid;
     gap: 12px;
     grid-template-columns: minmax(150px, 1fr) auto;
-    margin-bottom: 8px;
+    margin-bottom: 0;
+    padding: 7px 0;
 }
 
 .versionado-proyecto dt {
@@ -2176,8 +2170,8 @@ h1 {
     display: grid;
     grid-template-columns: 22px 1fr auto;
     margin-bottom: 0;
-    padding-bottom: 7px;
-    padding-top: 7px;
+    padding-bottom: 6px;
+    padding-top: 6px;
     padding-left: 0;
 }
 

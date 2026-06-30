@@ -1883,6 +1883,406 @@ h1 {
     }
 }
 
+/* Documento institucional: Acerca de FORENSIA */
+.pagina-acerca {
+    background-image:
+        linear-gradient(rgba(0,255,136,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(179,136,255,0.018) 1px, transparent 1px);
+    background-size: 34px 34px;
+}
+
+.pagina-acerca .contenedor-principal {
+    position: relative;
+}
+
+.pagina-acerca .contenedor-principal::before {
+    background: linear-gradient(90deg, transparent, rgba(0,255,136,0.07), transparent);
+    content: "";
+    height: 120px;
+    left: 0;
+    opacity: 0.45;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: -120px;
+    animation: terminal-scan 9s linear infinite;
+    z-index: 0;
+}
+
+.pagina-acerca .acerca-encabezado {
+    background: linear-gradient(135deg, rgba(179,136,255,0.055), transparent 55%);
+    border-bottom: 1px solid rgba(0,255,136,0.35);
+    border-top: 1px solid rgba(0,255,136,0.35);
+    overflow: hidden;
+    padding: 0 22px 28px;
+    position: relative;
+}
+
+.pagina-acerca .acerca-encabezado h1 {
+    margin: 10px 0 16px;
+}
+
+.terminal-barra {
+    align-items: center;
+    border-bottom: 1px solid rgba(179,136,255,0.2);
+    color: rgba(255,255,255,0.48);
+    display: flex;
+    font-size: 9px;
+    justify-content: space-between;
+    letter-spacing: 1px;
+    margin: 0 -22px 24px;
+    padding: 8px 12px;
+}
+
+.terminal-luces {
+    display: flex;
+    gap: 5px;
+}
+
+.terminal-luces i {
+    background: rgba(179,136,255,0.55);
+    border-radius: 50%;
+    display: block;
+    height: 6px;
+    width: 6px;
+}
+
+.terminal-luces i:first-child,
+.terminal-estado i {
+    background: #00ff88;
+    box-shadow: 0 0 7px rgba(0,255,136,0.8);
+}
+
+.terminal-estado {
+    align-items: center;
+    color: #00ff88;
+    display: flex;
+    gap: 6px;
+}
+
+.terminal-estado i {
+    border-radius: 50%;
+    display: inline-block;
+    height: 5px;
+    animation: terminal-pulse 1.8s ease-in-out infinite;
+    width: 5px;
+}
+
+.terminal-comando {
+    margin-bottom: 4px;
+}
+
+.cursor-terminal {
+    animation: terminal-blink 0.9s steps(1) infinite;
+}
+
+.terminal-telemetria {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 25px;
+}
+
+.terminal-telemetria span {
+    background: rgba(0,0,0,0.38);
+    border: 1px solid rgba(179,136,255,0.18);
+    color: rgba(255,255,255,0.44);
+    font-size: 8px;
+    letter-spacing: 1px;
+    padding: 9px;
+    text-align: center;
+}
+
+.terminal-telemetria b {
+    color: #00ff88;
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.acerca-introduccion {
+    margin: 28px 0 18px;
+    max-width: none;
+}
+
+.acerca-introduccion .seccion {
+    margin: 8px 0 12px;
+}
+
+.acerca-introduccion > p:last-child,
+.acerca-aviso p {
+    color: rgba(255,255,255,0.72);
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.75;
+}
+
+.acerca-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+}
+
+.acerca-grid-inferior {
+    margin-top: 18px;
+}
+
+.acerca-panel {
+    background-color: #070707;
+    border: 0;
+    border-left: 2px solid #00ff88;
+    border-right: 1px solid rgba(0,255,136,0.22);
+    box-shadow: inset 0 0 18px rgba(0,255,136,0.035);
+    overflow: hidden;
+    padding: 22px 24px;
+    position: relative;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.acerca-panel::before {
+    color: rgba(0,255,136,0.55);
+    content: "================================================================================================================";
+    font-family: 'Space Mono', Consolas, monospace;
+    font-size: 10px;
+    left: 0;
+    line-height: 10px;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    white-space: nowrap;
+}
+
+.acerca-panel::after {
+    bottom: -5px;
+    color: rgba(0,255,136,0.55);
+    content: "================================================================================================================";
+    font-family: 'Space Mono', Consolas, monospace;
+    font-size: 10px;
+    left: 0;
+    line-height: 10px;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    white-space: nowrap;
+}
+
+.acerca-panel:hover {
+    border-right-color: rgba(0,255,136,0.42);
+    box-shadow: inset 0 0 24px rgba(0,255,136,0.055), 0 0 12px rgba(0,255,136,0.07);
+    transform: translateY(-2px);
+}
+
+.acerca-panel h2 {
+    align-items: center;
+    color: #00ff88;
+    display: flex;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    margin: 8px 0 18px;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.acerca-panel h2::after {
+    background-image: repeating-linear-gradient(90deg, rgba(0,255,136,0.28) 0 7px, transparent 7px 11px);
+    bottom: 0;
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+}
+
+.acerca-panel ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.acerca-panel li {
+    color: #00ff88;
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    padding-left: 17px;
+    position: relative;
+}
+
+.acerca-panel:not(.roadmap-proyecto) li::before {
+    color: #00ff88;
+    content: "►";
+    font-size: 8px;
+    left: 0;
+    position: absolute;
+    top: 4px;
+}
+
+.acerca-aviso {
+    margin-top: 18px;
+    padding: 22px 24px;
+}
+
+.acerca-aviso strong {
+    color: #00ff88;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.acerca-aviso strong::after {
+    background-image: repeating-linear-gradient(90deg, rgba(0,255,136,0.28) 0 7px, transparent 7px 11px);
+    content: "";
+    display: block;
+    height: 1px;
+    margin-top: 12px;
+    width: 100%;
+}
+
+.acerca-aviso p {
+    margin: 8px 0 0;
+}
+
+.versionado-proyecto dl {
+    margin: 0;
+}
+
+.versionado-proyecto dl div {
+    border-bottom: 1px dotted rgba(0,255,136,0.13);
+    display: grid;
+    gap: 12px;
+    grid-template-columns: minmax(150px, 1fr) auto;
+    margin-bottom: 8px;
+}
+
+.versionado-proyecto dt {
+    color: #00ff88;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.versionado-proyecto dd {
+    color: #b388ff;
+    font-size: 11px;
+    margin: 0;
+    text-align: right;
+}
+
+.roadmap-proyecto li {
+    border-bottom: 1px dotted rgba(0,255,136,0.17);
+    display: grid;
+    grid-template-columns: 22px 1fr auto;
+    margin-bottom: 0;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    padding-left: 0;
+}
+
+.roadmap-proyecto li span {
+    color: #b388ff;
+    display: inline-block;
+    width: 22px;
+}
+
+.roadmap-proyecto li.completado span {
+    color: #00ff88;
+}
+
+.roadmap-proyecto li small {
+    color: #b388ff;
+    font-size: 8px;
+    letter-spacing: 1px;
+}
+
+.roadmap-proyecto li.completado small {
+    color: rgba(0,255,136,0.65);
+}
+
+.terminal-cierre {
+    border-bottom: 1px solid rgba(0,255,136,0.25);
+    border-top: 1px solid rgba(0,255,136,0.25);
+    color: rgba(0,255,136,0.58);
+    display: flex;
+    font-size: 8px;
+    justify-content: space-between;
+    letter-spacing: 1px;
+    margin-top: 24px;
+    padding: 8px 2px;
+}
+
+@keyframes terminal-blink {
+    50% { opacity: 0; }
+}
+
+@keyframes terminal-pulse {
+    50% { opacity: 0.35; }
+}
+
+@keyframes terminal-scan {
+    to { transform: translateY(calc(100vh + 240px)); }
+}
+
+footer .footer-acerca {
+    color: #b388ff;
+    margin-left: 18px;
+    transition: color 0.2s ease;
+}
+
+footer .footer-acerca:hover {
+    color: #00ff88;
+}
+
+@media (max-width: 720px) {
+    .acerca-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pagina-acerca .acerca-encabezado h1 {
+        font-size: clamp(28px, 9vw, 42px);
+        letter-spacing: 4px;
+    }
+
+    .terminal-telemetria {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 520px) {
+    .versionado-proyecto dl div {
+        grid-template-columns: 1fr;
+    }
+
+    .versionado-proyecto dd {
+        text-align: left;
+    }
+
+    footer .footer-acerca {
+        display: block;
+        margin: 9px 0 0;
+    }
+
+    .terminal-barra > span:nth-child(2) {
+        display: none;
+    }
+
+    .terminal-cierre {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pagina-acerca .contenedor-principal::before,
+    .terminal-estado i,
+    .cursor-terminal {
+        animation: none;
+    }
+}
+
 .volver-menu {
 
     border-left: 0;

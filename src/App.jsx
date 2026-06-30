@@ -564,7 +564,8 @@ function App() {
       </div>
 
       <footer>
-        FORENSIA // REPOSITORIO DE EVIDENCIA DIGITAL // CIB
+        <span>FORENSIA // REPOSITORIO DE EVIDENCIA DIGITAL // CIB</span>
+        <a className="footer-acerca" href="acerca-de-forensia.html">[ ACERCA DE FORENSIA ]</a>
       </footer>
     </>
   )

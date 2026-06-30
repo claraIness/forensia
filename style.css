@@ -1995,18 +1995,40 @@ h1 {
 
     display: grid;
 
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    gap: 4px;
+    column-gap: 42px;
+
+    row-gap: 5px;
 
     margin-top: 12px;
 
     margin-bottom: 18px;
 
-    padding-bottom: 12px;
+    padding: 14px 0 16px;
 
     position: relative;
 
+}
+
+.ficha-tecnica-forense::before {
+    background-color: rgba(0,255,136,0.75);
+    box-shadow: 0 0 6px rgba(0,255,136,0.75);
+    content: "";
+    height: 1px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.ficha-tecnica-forense h2 {
+    color: #00ff88;
+    font-size: 13px;
+    font-weight: 400;
+    grid-column: 1 / -1;
+    letter-spacing: 3px;
+    margin: 0 0 8px;
 }
 
 .ficha-tecnica-forense::after {
@@ -2033,12 +2055,29 @@ h1 {
 
     display: grid;
 
-    grid-template-columns: 170px 1fr;
+    grid-template-columns: minmax(145px, 1fr) auto;
 
     margin: 0;
 
     align-items: baseline;
 
+}
+
+@media (max-width: 760px) {
+    .ficha-tecnica-forense {
+        grid-template-columns: 1fr;
+    }
+
+    .ficha-tecnica-forense p {
+        grid-template-columns: minmax(145px, 1fr) auto;
+    }
+}
+
+@media (max-width: 440px) {
+    .ficha-tecnica-forense p {
+        gap: 4px;
+        grid-template-columns: 1fr;
+    }
 }
 
 .ficha-tecnica-forense span {

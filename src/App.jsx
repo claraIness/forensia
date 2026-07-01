@@ -339,7 +339,6 @@ function DossierCard({ dossier }) {
           <span>
             <span className="etiqueta">CLASIFICACIÓN:</span> {dossier.classification}
           </span>
-          <span className="dossier-access">[ ABRIR ]</span>
         </p>
       </div>
     </a>

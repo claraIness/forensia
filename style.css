@@ -798,6 +798,12 @@ a:hover {
 
 }
 
+.tool-preview-summary > span:nth-child(2) {
+    color: #b388ff;
+    font-family: 'Space Mono', Consolas, monospace;
+    line-height: 1.35;
+}
+
 .tool-preview-record dl {
 
     display: grid;
@@ -2221,8 +2227,21 @@ h1 {
 
 footer .footer-acerca {
     color: #b388ff;
-    margin-left: 18px;
+    margin-left: 0;
     transition: color 0.2s ease;
+}
+
+body:not(.pagina-dossier) > footer {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    justify-content: center;
+}
+
+body:not(.pagina-dossier) > footer .footer-acerca {
+    border-left: 1px solid rgba(0,255,136,0.35);
+    padding-left: 24px;
 }
 
 footer .footer-acerca:hover {
@@ -2256,6 +2275,13 @@ footer .footer-acerca:hover {
     footer .footer-acerca {
         display: block;
         margin: 9px 0 0;
+    }
+
+    body:not(.pagina-dossier) > footer .footer-acerca {
+        border-left: 0;
+        border-top: 1px solid rgba(0,255,136,0.25);
+        padding-left: 0;
+        padding-top: 9px;
     }
 
     .terminal-barra > span:nth-child(2) {
@@ -4044,6 +4070,15 @@ body:not(.pagina-dossier) .dossier-status .badge-activo {
     margin: 0;
 }
 
+body:not(.pagina-dossier) .dossier-status .badge-activo,
+body:not(.pagina-dossier) .dossier-title-row h2,
+body:not(.pagina-dossier) .dossier .categoria,
+body:not(.pagina-dossier) .dossier-name,
+body:not(.pagina-dossier) .dossier-classification {
+    font-family: 'Space Mono', Consolas, 'Courier New', monospace;
+    font-weight: 400;
+}
+
 body:not(.pagina-dossier) .dossier-blocks {
     display: inline-flex;
     gap: 3px;
@@ -4120,9 +4155,16 @@ body:not(.pagina-dossier) .dossier .categoria span {
 }
 
 body:not(.pagina-dossier) .dossier-name {
-    font-size: 16px;
-    letter-spacing: 0;
+    color: #c19cff;
+    font-size: 14px;
+    letter-spacing: 1px;
     margin-bottom: 0;
+    text-shadow: 0 0 5px rgba(179,136,255,0.18);
+    text-transform: uppercase;
+}
+
+body:not(.pagina-dossier) .dossier-classification {
+    letter-spacing: 0.5px;
 }
 
 body:not(.pagina-dossier) .dossier-classification {

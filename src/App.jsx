@@ -199,57 +199,21 @@ function SearchPanel({ query, onQueryChange, visibleCount }) {
 }
 
 function ArchiveIntel() {
-  const [openPanel, setOpenPanel] = useState(null)
-  const [isCompactView, setIsCompactView] = useState(false)
-
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 900px)')
-
-    function updateViewMode(event) {
-      setIsCompactView(event.matches)
-    }
-
-    updateViewMode(mediaQuery)
-    mediaQuery.addEventListener('change', updateViewMode)
-
-    return () => mediaQuery.removeEventListener('change', updateViewMode)
-  }, [])
-
-  function togglePanel(panel) {
-    if (!isCompactView) {
-      return
-    }
-
-    setOpenPanel((currentPanel) => currentPanel === panel ? null : panel)
-  }
-
-  const estadoOpen = !isCompactView || openPanel === 'estado'
-  const mapaOpen = !isCompactView || openPanel === 'mapa'
-
   return (
-    <section className="archivo-intel" aria-label="Estado y mapa del archivo">
-      <div className={`estado-archivo-panel intel-panel ${estadoOpen ? 'active' : ''}`}>
-        <button
-          className="intel-toggle"
-          type="button"
-          onClick={() => togglePanel('estado')}
-          aria-expanded={estadoOpen}
-        >
-          <span className="tool-panel-heading">
-            <span>[ PROYECTOS ]</span>
-            <small>DESARROLLOS FORENSIA</small>
-          </span>
-          <span>{isCompactView ? (estadoOpen ? '[ CERRAR ]' : '[ ABRIR ]') : '[ ABIERTO ]'}</span>
-        </button>
+    <section className="archivo-intel" aria-label="Proyectos de herramientas FORENSIA">
+      <header className="projects-heading">
+        <span>[ PROYECTOS ]</span>
+        <small>DESARROLLOS FORENSIA</small>
+      </header>
 
-        {estadoOpen && (
-          <a
-            className="for-tool-preview"
-            href="https://for-tool-001.streamlit.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Abrir proyecto FOR-TOOL-001, Generador de Informes de Evidencia"
-          >
+      <div className="estado-archivo-panel intel-panel active">
+        <a
+          className="for-tool-preview"
+          href="https://for-tool-001.streamlit.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir proyecto FOR-TOOL-001, Generador de Informes de Evidencia"
+        >
             <div className="tool-preview-summary">
               <span>[ FOR-TOOL-001 ]</span>
               <span>GENERADOR DE INFORMES DE EVIDENCIA</span>
@@ -267,32 +231,33 @@ function ArchiveIntel() {
             </div>
 
             <span className="tool-preview-action">[ ABRIR PROYECTO ]</span>
-          </a>
-        )}
+        </a>
       </div>
 
-      <div className={`mapa-expedientes intel-panel ${mapaOpen ? 'active' : ''}`}>
-        <button
-          className="intel-toggle"
-          type="button"
-          onClick={() => togglePanel('mapa')}
-          aria-expanded={mapaOpen}
+      <div className="estado-archivo-panel intel-panel active">
+        <a
+          className="for-tool-preview"
+          href="for-tool-002.html"
+          aria-label="Abrir proyecto FOR-TOOL-002, Analizador de Logs"
         >
-          <span>[ MAPA DE EXPEDIENTES ]</span>
-          <span>{isCompactView ? (mapaOpen ? '[ CERRAR ]' : '[ ABRIR ]') : '[ ABIERTO ]'}</span>
-        </button>
+            <div className="tool-preview-summary">
+              <span>[ FOR-TOOL-002 ]</span>
+              <span>ANALIZADOR DE LOGS</span>
+              <span>ESTADO: EN DESARROLLO</span>
+              <span>VERSION: 0.1</span>
+            </div>
 
-        {mapaOpen && (
-          <pre>{`FORENSIA_ARCHIVE
-├── LEG
-│   ├── LEG-001
-│   ├── LEG-002
-│   └── LEG-003
-└── FOR
-    ├── FOR-001
-    ├── FOR-002
-    └── FOR-003`}</pre>
-        )}
+            <div className="tool-preview-record">
+              <span>[ DESCRIPCION ]</span>
+              <dl>
+                <div><dt>SISTEMAS</dt><dd>MULTIPLATAFORMA</dd></div>
+                <div><dt>EVENTOS</dt><dd>DETECCION RELEVANTE</dd></div>
+                <div><dt>INFORMES</dt><dd>RESUMEN Y GENERACION</dd></div>
+              </dl>
+            </div>
+
+            <span className="tool-preview-action">[ ABRIR PROYECTO ]</span>
+        </a>
       </div>
     </section>
   )
